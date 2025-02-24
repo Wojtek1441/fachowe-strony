@@ -1,0 +1,153 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Projekty graficzne - Fachowe Strony',
+  description:
+    'Profesjonalne projekty graficzne dla firm. Tworzenie logo, identyfikacja wizualna, grafiki na strony internetowe i social media. Kraków, Małopolska.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget -->
+  <Hero
+    tagline="Projekty graficzne dla Twojej firmy"
+    image={{
+      src: 'https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Projekty graficzne Kraków',
+    }}
+  >
+    <Fragment slot="title">
+      Profesjonalna <br />
+      <span class="text-accent dark:text-white highlight">identyfikacja wizualna</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Tworzymy unikalne projekty graficzne dla stron internetowych, social media i drukowanych materiałów reklamowych.
+      Podkreśl swoją markę i wyróżnij się na tle konkurencji.
+    </Fragment>
+  </Hero>
+
+  <!-- Features3 Widget - Nasza oferta -->
+  <Features3
+    title="Nasze usługi graficzne"
+    subtitle="Kompleksowe projekty dopasowane do Twojej marki"
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Logo i branding',
+        description: 'Projektowanie profesjonalnych logo i systemów identyfikacji wizualnej.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Grafiki na strony www',
+        description: 'Kreatywne banery, ilustracje i elementy graficzne do stron internetowych.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Materiały reklamowe',
+        description: 'Projektowanie ulotek, wizytówek, katalogów i innych materiałów drukowanych.',
+        icon: 'tabler:file',
+      },
+    ]}
+  />
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Social Media',
+        description: 'Grafiki dostosowane do Facebooka, Instagrama, LinkedIn i innych platform.',
+        icon: 'tabler:camera',
+      },
+      {
+        title: 'Prezentacje i infografiki',
+        description: 'Profesjonalne prezentacje biznesowe oraz czytelne infografiki.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Animacje i video',
+        description: 'Tworzenie animowanych grafik i krótkich filmów promocyjnych.',
+        icon: 'tabler:video',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1504973960431-3de797ef7980?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Projektowanie graficzne w Krakowie',
+    }}
+  />
+
+  <!-- Steps2 Widget - Jak pracujemy? -->
+  <Steps2
+    title="Jak wygląda współpraca?"
+    subtitle="Każdy projekt jest dostosowany do indywidualnych potrzeb Twojej firmy"
+    items={[
+      {
+        title: 'Konsultacja i analiza',
+        description: 'Poznajemy Twoją markę, analizujemy konkurencję i ustalamy kierunek projektu.',
+      },
+      {
+        title: 'Tworzenie projektów',
+        description: 'Opracowujemy koncepcję graficzną i przygotowujemy wstępne wizualizacje.',
+      },
+      {
+        title: 'Poprawki i finalizacja',
+        description: 'Dostosowujemy projekt zgodnie z Twoimi uwagami, przygotowujemy pliki do użytku.',
+      },
+    ]}
+  />
+
+  <!-- SEO Section (Tekst dla wyszukiwarek) -->
+  <section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">Projekty graficzne dla firm – Kraków i Małopolska</h2>
+      <p class="mb-4 text-lg text-gray-700">
+        Wyróżnij swoją markę dzięki profesjonalnym <strong>projektom graficznym</strong>. Fachowe Strony oferują
+        kompleksową obsługę wizualną – od <strong>projektowania logo</strong>, przez <strong
+          >identyfikację wizualną</strong
+        >, po <strong>grafiki na strony internetowe i media społecznościowe</strong>. Tworzymy kreatywne materiały,
+        które pomagają firmom budować spójny wizerunek.
+      </p>
+      <p class="mb-4 text-lg text-gray-700">
+        Nasze usługi obejmują <strong
+          >projektowanie graficzne w Krakowie, Tarnowie, Nowym Sączu, Oświęcimiu, Chrzanowie, Zakopanem, Wieliczce,
+          Bochni, Myślenicach i Olkuszu</strong
+        >. Jeśli prowadzisz firmę w Małopolsce, nasze projekty pomogą Ci w skutecznej promocji.
+      </p>
+      <p class="mb-4 text-lg text-gray-700">
+        Tworzymy nowoczesne <strong>grafiki na strony internetowe</strong>, materiały reklamowe do druku oraz
+        infografiki. Oferujemy również <strong>grafiki na Facebooka, Instagrama i LinkedIn</strong>, które angażują
+        użytkowników i budują profesjonalny wizerunek Twojej firmy.
+      </p>
+      <p class="mb-4 text-lg text-gray-700">
+        Jeśli potrzebujesz <strong>identyfikacji wizualnej dla Twojej firmy</strong>, skontaktuj się z nami –
+        przygotujemy unikalne rozwiązania dopasowane do Twojej branży i celów biznesowych.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features2 Widget (Kontakt) -->
+  <Features2
+    title="Skontaktuj się z nami"
+    tagline="Stwórz unikalny wizerunek Twojej firmy"
+    columns={2}
+    items={[
+      {
+        title: 'Darmowa wycena',
+        description: 'Skontaktuj się z nami i otrzymaj indywidualną wycenę projektu.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Indywidualne podejście',
+        description: 'Każdy projekt tworzony jest zgodnie z Twoimi oczekiwaniami.',
+        icon: 'tabler:palette',
+      },
+    ]}
+  />
+</Layout>

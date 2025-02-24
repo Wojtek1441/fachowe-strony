@@ -1,0 +1,79 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Kontakt',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="STRONY I SKLEPY INTERNETOWE" title="Kontakt" />
+
+  <ContactUs
+    id="form"
+    title="Potrzebujesz szybkiej wyceny strony lub sklepu?"
+    subtitle="Zapraszamy serdecznie do kontaktu mailowego lub telefonicznego. Chętnie odpowiemy na wszystkie Państwa pytania i wątpliwości."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Imię i nazwisko',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Wiadomość',
+    }}
+    disclaimer={{
+      label:
+        'Akceptuję Zasady Korzystania z Serwisu fachowestrony.pl i wyrażam zgodę na przetwarzanie przez Fachowe Strony udostępnionych przeze mnie danych osobowych na warunkach opisanych w Zasadach.',
+    }}
+    description="Our support team typically responds within 24 business hours."
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Jesteśmy tutaj, aby pomóc!"
+    items={[
+      {
+        title: 'Wspieramy twój biznes',
+        description: `Czatuj z nami w sprawie zapytań dotyczących zarządzania kontem, nawigacji po stronie, problemów z płatnościami, dostępu do zakupionych szablonów lub ogólnych pytań dotyczących funkcji strony.`,
+      },
+      {
+        title: 'Dział sprzedaży',
+        description:
+          'Czatuj z nami w sprawie zapytań dotyczących zarządzania kontem, nawigacji po stronie, problemów z płatnościami, dostępu do zakupionych szablonów lub ogólnych pytań dotyczących funkcji strony.',
+      },
+      {
+        title: 'Wsparcie techniczne',
+        description:
+          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
+      },
+      {
+        title: 'Telefon',
+        description: '+48',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Email',
+        description: 'info@fachowestrony.pl',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Lokalizacja',
+        description: 'Kraków',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+</Layout>

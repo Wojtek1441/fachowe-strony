@@ -1,0 +1,132 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Sklepy internetowe',
+  description:
+    'Profesjonalne sklepy internetowe dopasowane do potrzeb Twojego biznesu. Zwiększ sprzedaż dzięki naszym nowoczesnym rozwiązaniom e-commerce.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget -->
+  <Hero
+    tagline="Sklepy internetowe"
+    image={{
+      src: 'https://images.unsplash.com/photo-1581091870621-1b24f4d3fa9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Sklepy internetowe',
+    }}
+  >
+    <Fragment slot="title">
+      Profesjonalne sklepy internetowe <br />
+      <span class="text-accent dark:text-white highlight">dla dynamicznego biznesu</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Specjalizujemy się w tworzeniu funkcjonalnych i nowoczesnych sklepów online. Nasze rozwiązania łączą intuicyjny
+      design, zaawansowane funkcje e-commerce oraz pełną integrację z systemami płatności.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget -->
+  <Stats
+    title="Nasze osiągnięcia"
+    stats={[
+      { title: 'Lat doświadczenia', amount: '8' },
+      { title: 'Sklepy online', amount: '150+' },
+      { title: 'Zadowolonych klientów', amount: '400+' },
+      { title: 'Projekty e-commerce', amount: '75+' },
+    ]}
+  />
+
+  <!-- Features3 Widget (Oferta) -->
+  <Features3
+    title="Nasza oferta"
+    subtitle="Kompleksowe rozwiązania dla Twojego sklepu online"
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Responsywny design',
+        description:
+          'Tworzymy sklepy, które wyglądają świetnie na każdym urządzeniu, gwarantując doskonałe doświadczenia użytkownika.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Integracje płatności',
+        description: 'Bezpieczne systemy płatności online umożliwiają szybkie i łatwe transakcje.',
+        icon: 'tabler:credit-card',
+      },
+      {
+        title: 'CMS & Zarządzanie treścią',
+        description: 'Intuicyjne systemy zarządzania treścią, pozwalające na łatwą aktualizację sklepu.',
+        icon: 'tabler:settings',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget (Dodatkowe usługi) -->
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'SEO dla e-commerce',
+        description: 'Optymalizujemy sklepy internetowe, aby przyciągały więcej klientów z wyszukiwarek.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Marketing online',
+        description: 'Prowadzimy kampanie reklamowe, które zwiększają ruch i sprzedaż w Twoim sklepie.',
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Wsparcie techniczne',
+        description: 'Zapewniamy ciągłe wsparcie techniczne oraz regularne aktualizacje systemów.',
+        icon: 'tabler:headset',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1590642911990-1a6e39c4c5b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Wsparcie techniczne i integracje e-commerce',
+    }}
+  />
+
+  <!-- Steps2 Widget (Proces) -->
+  <Steps2
+    title="Jak to robimy?"
+    subtitle="Nasz sprawdzony proces budowy sklepu internetowego gwarantuje sukces"
+    items={[
+      { title: 'Konsultacja', description: 'Poznajemy potrzeby Twojego biznesu i planujemy strategię e-commerce.' },
+      {
+        title: 'Projektowanie',
+        description: 'Tworzymy intuicyjny i estetyczny interfejs sklepu, skoncentrowany na konwersji.',
+      },
+      {
+        title: 'Wdrożenie',
+        description:
+          'Implementujemy sklep z wykorzystaniem najnowszych technologii, zapewniając bezpieczeństwo transakcji.',
+      },
+      { title: 'Wsparcie', description: 'Zapewniamy stałe wsparcie techniczne oraz optymalizację działania sklepu.' },
+    ]}
+  />
+
+  <!-- Features2 Widget (Kontakt) -->
+  <Features2
+    title="Skontaktuj się z nami"
+    tagline="Jesteśmy do Twojej dyspozycji"
+    columns={2}
+    items={[
+      {
+        title: 'Konsultacja online',
+        description: 'Umów się na darmową konsultację i omów szczegóły projektu.',
+        icon: 'tabler:messages',
+      },
+      { title: 'Telefon kontaktowy', description: 'Skontaktuj się z naszym działem e-commerce.', icon: 'tabler:phone' },
+    ]}
+  />
+</Layout>

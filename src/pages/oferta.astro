@@ -1,0 +1,124 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Nasze Usługi',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Nasze Usługi"
+    image={{
+      src: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Nowoczesne strony internetowe',
+    }}
+  >
+    <Fragment slot="title">
+      Kompleksowe rozwiązania <br />
+      <span class="text-accent dark:text-white highlight"> dla Twojego biznesu online</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Specjalizujemy się w tworzeniu stron internetowych, e-commerce, aplikacji webowych oraz usługach SEO i
+      marketingowych. Zapewniamy pełne wsparcie techniczne i hosting.
+    </Fragment>
+  </Hero>
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Nasza oferta"
+    subtitle="Tworzymy skuteczne i nowoczesne rozwiązania dla Twojej firmy."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Strony internetowe',
+        description: 'Projektujemy nowoczesne, responsywne strony internetowe, które przyciągają klientów.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Sklepy internetowe',
+        description: 'Tworzymy wydajne i estetyczne sklepy online na WooCommerce, PrestaShop i Shopify.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Aplikacje webowe',
+        description: 'Dedykowane aplikacje internetowe dostosowane do indywidualnych potrzeb Twojej firmy.',
+        icon: 'tabler:code',
+      },
+    ]}
+  />
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'SEO i Pozycjonowanie',
+        description: 'Zwiększamy widoczność Twojej strony w wyszukiwarkach i poprawiamy jej wyniki.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Marketing Internetowy',
+        description: 'Prowadzimy skuteczne kampanie reklamowe w Google Ads i mediach społecznościowych.',
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Hosting i Wsparcie',
+        description: 'Oferujemy bezpieczny hosting oraz wsparcie techniczne 24/7.',
+        icon: 'tabler:server',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1531497865144-0464ef8fb9a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Profesjonalne usługi online',
+    }}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Jak pracujemy?"
+    subtitle="Nasza metodologia zapewnia skuteczność i najwyższą jakość usług."
+    items={[
+      {
+        title: 'Analiza i strategia',
+        description: 'Szczegółowa analiza potrzeb biznesowych i określenie strategii działania.',
+      },
+      {
+        title: 'Projekt i wdrożenie',
+        description: 'Tworzenie responsywnych stron i aplikacji zgodnych z najnowszymi trendami.',
+      },
+      { title: 'Optymalizacja i wsparcie', description: 'Monitorowanie, optymalizacja i ciągłe wsparcie techniczne.' },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Skontaktuj się z nami"
+    tagline="Masz pytania?"
+    columns={2}
+    items={[
+      {
+        title: 'Porozmawiaj z nami',
+        description: 'Skontaktuj się z naszym ekspertem i uzyskaj darmową konsultację.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Zadzwoń do nas',
+        description: 'Omówmy Twoje potrzeby i znajdźmy najlepsze rozwiązanie dla Twojego biznesu.',
+        icon: 'tabler:phone',
+      },
+    ]}
+  />
+</Layout>

@@ -1,0 +1,34 @@
+---
+import type { InferGetStaticPropsType } from 'astro';
+import Layout from '~/layouts/PageLayout.astro';
+import BlogList from '~/components/blog/List.astro';
+import Headline from '~/components/blog/Headline.astro';
+import Pagination from '~/components/blog/Pagination.astro';
+import { getStaticPaths } from '~/utils/getStaticPaths';
+
+export const prerender = true;
+
+const { page } = Astro.props as InferGetStaticPropsType<typeof getStaticPaths>;
+const currentPage = page?.currentPage ?? 1;
+
+const metadata = {
+  title: `Blog${currentPage > 1 ? ` — Strona ${currentPage}` : ''}`,
+  robots: {
+    index: currentPage === 1,
+    follow: true,
+  },
+  openGraph: {
+    type: 'blog',
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+    <Headline subtitle="Najświeższe informacje, poradniki i aktualności ze świata stron, SEO i e-commerce">
+      Blog Fachowe Strony
+    </Headline>
+    <BlogList posts={page?.data || []} />
+    <Pagination prevUrl={page?.url?.prev} nextUrl={page?.url?.next} />
+  </section>
+</Layout>

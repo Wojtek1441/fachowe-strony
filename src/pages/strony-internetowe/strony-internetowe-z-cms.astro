@@ -1,0 +1,139 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Strony z CMS',
+  description:
+    'Profesjonalne strony internetowe oparte na popularnych systemach CMS: WordPress, Umbraco, Joomla, Strapi. Zarządzaj treścią łatwo i efektywnie.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget -->
+  <Hero
+    tagline="Strony z CMS"
+    image={{
+      src: 'https://images.unsplash.com/photo-1593642532400-2682810df593?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'CMS Websites',
+    }}
+  >
+    <Fragment slot="title">
+      Profesjonalne strony z CMS <br />
+      <span class="text-accent dark:text-white highlight">WordPress, Umbraco, Joomla, Strapi</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Oferujemy rozwiązania oparte na najpopularniejszych systemach CMS, które umożliwiają łatwe zarządzanie treścią,
+      skalowalność oraz elastyczność w prowadzeniu biznesu online.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget -->
+  <Stats
+    title="Dlaczego warto wybrać nasze rozwiązania CMS?"
+    stats={[
+      { title: 'Projektów', amount: '200+' },
+      { title: 'Zadowolonych klientów', amount: '400+' },
+      { title: 'Lat doświadczenia', amount: '8' },
+      { title: 'Nagrody', amount: '10' },
+    ]}
+  />
+
+  <!-- Features3 Widget (Oferta CMS) -->
+  <Features3
+    title="Nasza oferta CMS"
+    subtitle="Wybierz idealne rozwiązanie dla Twojej firmy"
+    columns={2}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'WordPress',
+        description: 'Najpopularniejszy system CMS, idealny do blogów, firmowych stron i sklepów online.',
+        icon: 'tabler:brand-wordpress',
+      },
+      {
+        title: 'Umbraco',
+        description: 'Elastyczny CMS dla średnich i dużych przedsiębiorstw, dający pełną kontrolę nad treścią.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Joomla',
+        description: 'Wszechstronny CMS do tworzenia dynamicznych stron z rozbudowanymi funkcjonalnościami.',
+        icon: 'tabler:layout-grid',
+      },
+      {
+        title: 'Strapi',
+        description:
+          'Nowoczesny headless CMS, idealny do szybkiego tworzenia interfejsów API i integracji z aplikacjami.',
+        icon: 'tabler:cloud',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget (Proces wdrożenia CMS) -->
+  <Steps2
+    title="Jak pracujemy?"
+    subtitle="Nasz proces wdrożenia CMS gwarantuje efektywność i satysfakcję"
+    items={[
+      {
+        title: 'Konsultacja',
+        description: 'Poznajemy Twoje potrzeby oraz wybieramy najlepszy system CMS dla Twojego biznesu.',
+      },
+      { title: 'Projektowanie', description: 'Tworzymy unikalny design dostosowany do wybranego systemu CMS.' },
+      {
+        title: 'Wdrożenie',
+        description: 'Instalujemy, konfigurujemy i personalizujemy CMS, aby spełniał Twoje oczekiwania.',
+      },
+      {
+        title: 'Szkolenie i wsparcie',
+        description: 'Zapewniamy szkolenie z obsługi CMS oraz stałe wsparcie techniczne.',
+      },
+    ]}
+  />
+
+  <!-- Dłuższy tekst SEO -->
+  <section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">Dlaczego warto wybrać stronę z CMS?</h2>
+      <p class="mb-4 text-lg text-gray-700">
+        Strony internetowe z systemem zarządzania treścią (CMS) to rozwiązanie, które pozwala na łatwe aktualizowanie i
+        dostosowywanie zawartości witryny bez potrzeby angażowania programisty. Dzięki temu firmy mogą szybko reagować
+        na zmieniające się warunki rynkowe i aktualizować informacje, aby zawsze były zgodne z najnowszymi trendami.
+      </p>
+      <p class="mb-4 text-lg text-gray-700">
+        Nasze projekty CMS, oparte na platformach takich jak WordPress, Umbraco, Joomla i Strapi, gwarantują nie tylko
+        atrakcyjny design, ale także intuicyjność i bezpieczeństwo. Wybierając nasze usługi, otrzymujesz stronę, która
+        jest łatwa w obsłudze, responsywna i zoptymalizowana pod kątem SEO. To sprawia, że Twoja firma zyskuje większą
+        widoczność w wyszukiwarkach i przyciąga więcej klientów.
+      </p>
+      <p class="text-lg text-gray-700">
+        Niezależnie od tego, czy prowadzisz działalność w Krakowie, Krzeszowicach, Zabierzowie czy w całej Małopolsce,
+        nasze realizacje obejmują profesjonalne strony CMS, które idealnie odpowiadają specyfice lokalnego rynku. Postaw
+        na elastyczność i innowacyjność – inwestując w stronę z CMS, inwestujesz w przyszłość swojego biznesu.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features2 Widget (Kontakt) -->
+  <Features2
+    title="Skontaktuj się z nami"
+    tagline="Jesteśmy gotowi pomóc Ci osiągnąć sukces online"
+    columns={2}
+    items={[
+      {
+        title: 'Konsultacja online',
+        description: 'Umów się na darmową konsultację, aby poznać szczegóły wdrożenia CMS.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Telefon kontaktowy',
+        description: 'Zadzwoń do naszego zespołu i dowiedz się więcej o rozwiązaniach CMS.',
+        icon: 'tabler:phone',
+      },
+    ]}
+  />
+</Layout>

@@ -1,0 +1,134 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Strony responsywne',
+  description:
+    'Tworzymy nowoczesne, responsywne strony internetowe, które doskonale działają na każdym urządzeniu. Zapewniamy unikalny design, intuicyjną nawigację oraz pełną optymalizację SEO.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget -->
+  <Hero
+    tagline="Strony responsywne"
+    image={{
+      src: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Responsywne strony internetowe',
+    }}
+  >
+    <Fragment slot="title">
+      Nowoczesne, responsywne strony <br />
+      <span class="text-accent dark:text-white highlight">dla Twojego biznesu</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Specjalizujemy się w tworzeniu stron, które wyglądają i działają perfekcyjnie na każdym urządzeniu – od smartfonów
+      po komputery. Nasze rozwiązania łączą unikalny design, intuicyjną nawigację i optymalizację SEO.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget -->
+  <Stats
+    title="Dlaczego warto wybrać nasze rozwiązania?"
+    stats={[
+      { title: 'Lat doświadczenia', amount: '10' },
+      { title: 'Zrealizowanych projektów', amount: '300+' },
+      { title: 'Zadowolonych klientów', amount: '500+' },
+      { title: 'Nagrody', amount: '12' },
+    ]}
+  />
+
+  <!-- Features3 Widget (Oferta) -->
+  <Features3
+    title="Nasza oferta"
+    subtitle="Kompleksowe rozwiązania projektowe dla responsywnych stron"
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Unikalny design',
+        description: 'Tworzymy oryginalne projekty, które wyróżniają Twoją markę i angażują użytkowników.',
+        icon: 'tabler:brush',
+      },
+      {
+        title: 'Optymalizacja UX',
+        description:
+          'Projektujemy intuicyjne interfejsy, które poprawiają doświadczenie użytkownika i zwiększają konwersję.',
+        icon: 'tabler:layout-dashboard',
+      },
+      {
+        title: 'SEO i szybkość',
+        description:
+          'Dbamy o optymalizację stron pod kątem wyszukiwarek oraz szybkiego ładowania na wszystkich urządzeniach.',
+        icon: 'tabler:rocket',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget (Dodatkowe usługi) -->
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Responsywność',
+        description:
+          'Nasze strony automatycznie dostosowują się do rozmiarów ekranów, zapewniając doskonały wygląd na smartfonach, tabletach i komputerach.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Integracje',
+        description:
+          'Łączymy Twoją stronę z systemami CRM, narzędziami analitycznymi oraz platformami społecznościowymi.',
+        icon: 'tabler:link',
+      },
+      {
+        title: 'Wsparcie techniczne',
+        description: 'Zapewniamy ciągłe wsparcie oraz aktualizacje, aby Twoja strona zawsze działała bez zarzutu.',
+        icon: 'tabler:headset',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Integracje i wsparcie techniczne',
+    }}
+  />
+
+  <!-- Steps2 Widget (Proces) -->
+  <Steps2
+    title="Jak pracujemy?"
+    subtitle="Nasza metodyka gwarantuje efektywne i nowoczesne projekty"
+    items={[
+      { title: 'Analiza', description: 'Poznajemy Twoje potrzeby, analizujemy konkurencję oraz trendy rynkowe.' },
+      { title: 'Projektowanie', description: 'Tworzymy koncepcję i unikalny design, dostosowany do Twojej marki.' },
+      {
+        title: 'Wdrożenie',
+        description: 'Implementujemy stronę z wykorzystaniem najnowszych technologii, gwarantując pełną responsywność.',
+      },
+      {
+        title: 'Wsparcie',
+        description: 'Zapewniamy stałe wsparcie oraz optymalizację strony, aby zawsze działała perfekcyjnie.',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget (Kontakt) -->
+  <Features2
+    title="Skontaktuj się z nami"
+    tagline="Jesteśmy do Twojej dyspozycji"
+    columns={2}
+    items={[
+      {
+        title: 'Konsultacja online',
+        description: 'Umów się na darmową konsultację i omów szczegóły projektu.',
+        icon: 'tabler:messages',
+      },
+      { title: 'Telefon kontaktowy', description: 'Skontaktuj się z naszym zespołem już teraz.', icon: 'tabler:phone' },
+    ]}
+  />
+</Layout>

@@ -1,0 +1,130 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Projektowanie stron internetowych',
+  description:
+    'Tworzymy nowoczesne, responsywne strony internetowe, które wspierają rozwój Twojego biznesu online. Nasze rozwiązania obejmują design, programowanie, optymalizację SEO oraz integracje e-commerce.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget -->
+  <Hero
+    tagline="Projektowanie Stron Internetowych"
+    image={{
+      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Projektowanie stron internetowych',
+    }}
+  >
+    <Fragment slot="title"> Unikalny design dla Twojego biznesu online </Fragment>
+    <Fragment slot="subtitle">
+      Tworzymy responsywne, przyjazne dla użytkownika strony internetowe, które wyróżniają się nowoczesnym designem,
+      funkcjonalnością oraz optymalizacją pod kątem SEO.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget -->
+  <Stats
+    title="Nasze osiągnięcia"
+    stats={[
+      { title: 'Lat doświadczenia', amount: '10' },
+      { title: 'Projektów', amount: '300+' },
+      { title: 'Zadowolonych klientów', amount: '500+' },
+      { title: 'Nagrody', amount: '12' },
+    ]}
+  />
+
+  <!-- Features3 Widget (Oferta) -->
+  <Features3
+    title="Nasza oferta"
+    subtitle="Kompleksowe rozwiązania dla Twojego biznesu"
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Strony internetowe',
+        description:
+          'Projektujemy nowoczesne, responsywne strony WWW, które przyciągają klientów i wspierają Twoje cele biznesowe.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Sklepy online',
+        description: 'Tworzymy funkcjonalne sklepy internetowe z intuicyjnym systemem zarządzania treścią.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Systemy CMS',
+        description:
+          'Oferujemy rozwiązania oparte na popularnych systemach CMS, umożliwiające łatwą edycję i aktualizację treści.',
+        icon: 'tabler:settings',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget (Dodatkowe usługi) -->
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Optymalizacja SEO',
+        description: 'Zwiększamy widoczność Twojej strony w wyszukiwarkach poprzez profesjonalne działania SEO.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Integracje e-commerce',
+        description: 'Łączymy Twoją stronę z systemami płatności i narzędziami e-commerce, ułatwiając sprzedaż online.',
+        icon: 'tabler:link',
+      },
+      {
+        title: 'Wsparcie techniczne',
+        description: 'Zapewniamy kompleksowe wsparcie techniczne oraz hosting, aby Twoja strona działała bez zakłóceń.',
+        icon: 'tabler:headset',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1556740749-887f6717d7e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Wsparcie techniczne i integracje',
+    }}
+  />
+
+  <!-- Steps2 Widget (Proces) -->
+  <Steps2
+    title="Jak to robimy?"
+    subtitle="Nasz sprawdzony proces zapewnia najwyższą jakość usług"
+    items={[
+      { title: 'Konsultacja', description: 'Poznajemy potrzeby Twojego biznesu i opracowujemy strategię działania.' },
+      { title: 'Projektowanie', description: 'Tworzymy unikalne projekty dostosowane do Twojej marki i celów.' },
+      {
+        title: 'Wdrożenie',
+        description: 'Implementujemy stronę z wykorzystaniem najnowszych technologii i standardów.',
+      },
+      { title: 'Wsparcie', description: 'Zapewniamy stałe wsparcie techniczne oraz optymalizację działania witryny.' },
+    ]}
+  />
+
+  <!-- Features2 Widget (Kontakt) -->
+  <Features2
+    title="Skontaktuj się z nami"
+    tagline="Jesteśmy do Twojej dyspozycji"
+    columns={2}
+    items={[
+      {
+        title: 'Konsultacja online',
+        description: 'Umów się na darmową konsultację i omów szczegóły projektu.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Telefon kontaktowy',
+        description: 'Skontaktuj się z naszym działem obsługi klienta.',
+        icon: 'tabler:phone',
+      },
+    ]}
+  />
+</Layout>

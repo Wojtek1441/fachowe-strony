@@ -1,0 +1,151 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Pisanie tekstów - Fachowe Strony',
+  description:
+    'Profesjonalne copywriting, teksty na strony internetowe, opisy produktów, artykuły blogowe i treści SEO. Kraków, Małopolska.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget -->
+  <Hero
+    tagline="Profesjonalne pisanie tekstów"
+    image={{
+      src: 'https://images.unsplash.com/photo-1507835661101-56f8c6374a58?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Pisanie tekstów Kraków',
+    }}
+  >
+    <Fragment slot="title">
+      Skuteczny <br />
+      <span class="text-accent dark:text-white highlight">copywriting dla Twojej firmy</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Tworzymy angażujące treści, które przyciągają klientów i zwiększają konwersję. Profesjonalne teksty na strony
+      internetowe, artykuły blogowe, opisy produktów i treści SEO.
+    </Fragment>
+  </Hero>
+
+  <!-- Features3 Widget - Nasza oferta -->
+  <Features3
+    title="Nasze usługi copywriterskie"
+    subtitle="Dobre teksty to klucz do sukcesu Twojej strony"
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Teksty na strony internetowe',
+        description: 'Pisanie unikalnych, perswazyjnych treści dopasowanych do Twojej branży.',
+        icon: 'tabler:article',
+      },
+      {
+        title: 'Opisy produktów',
+        description: 'Skuteczne i przekonujące opisy do sklepów internetowych.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Artykuły blogowe',
+        description: 'Regularne publikacje na bloga, które angażują czytelników i poprawiają SEO.',
+        icon: 'tabler:book',
+      },
+    ]}
+  />
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Treści SEO',
+        description: 'Optymalizowane pod wyszukiwarki teksty zwiększające widoczność Twojej strony.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Treści na social media',
+        description: 'Kreatywne posty i kampanie reklamowe na Facebooka, Instagrama i LinkedIn.',
+        icon: 'tabler:megaphone',
+      },
+      {
+        title: 'E-booki i materiały edukacyjne',
+        description: 'Pisanie i redakcja treści do e-booków, poradników i kursów online.',
+        icon: 'tabler:book-open',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1517433456452-f9633a875f6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Copywriting Kraków',
+    }}
+  />
+
+  <!-- Steps2 Widget - Jak pracujemy? -->
+  <Steps2
+    title="Jak wygląda współpraca?"
+    subtitle="Zapewniamy kompleksowe podejście do tworzenia treści"
+    items={[
+      {
+        title: 'Analiza i strategia',
+        description: 'Badamy Twoją branżę, grupę docelową i opracowujemy strategię komunikacji.',
+      },
+      { title: 'Pisanie i optymalizacja', description: 'Tworzymy angażujące treści dostosowane do SEO i UX.' },
+      {
+        title: 'Korekta i publikacja',
+        description: 'Redagujemy teksty, wprowadzamy poprawki i wdrażamy je na stronę.',
+      },
+    ]}
+  />
+
+  <!-- SEO Section (Tekst dla wyszukiwarek) -->
+  <section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">Profesjonalne pisanie tekstów – Kraków i Małopolska</h2>
+      <p class="mb-4 text-lg text-gray-700">
+        Skuteczny <strong>copywriting</strong> to klucz do sukcesu każdej strony internetowej. Oferujemy kompleksowe usługi
+        tworzenia treści, w tym <strong>pisanie tekstów na strony internetowe</strong>, <strong>artykuły blogowe</strong
+        >, <strong>opisy produktów</strong> oraz <strong>treści SEO</strong>. Dzięki naszym tekstom Twoja strona nie
+        tylko wygląda profesjonalnie, ale także zajmuje wysokie pozycje w wyszukiwarkach.
+      </p>
+      <p class="mb-4 text-lg text-gray-700">
+        Tworzymy <strong
+          >teksty SEO w Krakowie, Tarnowie, Nowym Sączu, Oświęcimiu, Chrzanowie, Zakopanem, Wieliczce, Bochni,
+          Myślenicach i Olkuszu</strong
+        >. Jeśli prowadzisz firmę w Małopolsce, nasze treści pomogą Ci dotrzeć do klientów w Twoim regionie.
+      </p>
+      <p class="mb-4 text-lg text-gray-700">
+        Specjalizujemy się w pisaniu **perswazyjnych tekstów sprzedażowych**, które zwiększają konwersję. Nasze <strong
+          >opisy produktów do e-commerce</strong
+        > przyciągają uwagę i budują zaufanie klientów. Tworzymy także <strong>treści na media społecznościowe</strong>,
+        które angażują i zwiększają zasięgi.
+      </p>
+      <p class="mb-4 text-lg text-gray-700">
+        Jeśli szukasz profesjonalnych tekstów dla Twojej firmy, skontaktuj się z nami! Nasze usługi obejmują także <strong
+          >redagowanie, korektę i optymalizację treści</strong
+        >, aby Twoja strona internetowa była w pełni dopracowana.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features2 Widget (Kontakt) -->
+  <Features2
+    title="Skontaktuj się z nami"
+    tagline="Potrzebujesz skutecznych tekstów?"
+    columns={2}
+    items={[
+      {
+        title: 'Darmowa wycena',
+        description: 'Skontaktuj się z nami i otrzymaj indywidualną wycenę treści.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Dostosowane do Twojej marki',
+        description: 'Tworzymy treści zgodne z Twoimi wartościami i strategią marketingową.',
+        icon: 'tabler:edit',
+      },
+    ]}
+  />
+</Layout>

@@ -7,76 +7,64 @@ export const headerData = {
       href: getPermalink('/about'),
     },
     {
-      text: 'Oferta',
-      href: getPermalink('/services'),
+      text: 'Strony internetowe',
+      href: getPermalink('/strony-internetowe'),
       links: [
         {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
+          text: 'Proste strony internetowe',
+          href: getPermalink('/strony-internetowe/proste-strony-internetowe'),
         },
         {
-          text: 'Services',
-          href: getPermalink('/services'),
+          text: 'Sklepy internetowe',
+          href: getPermalink('/sklepy-internetowe'),
         },
         {
-          text: 'Pricing',
-          href: getPermalink('/pricing'),
+          text: 'Strony responsywne',
+          href: getPermalink('/strony-internetowe/strony-responsywne'),
         },
         {
-          text: 'About us',
-          href: getPermalink('/about'),
+          text: 'Strony z CMS',
+          href: getPermalink('/strony-internetowe/strony-internetowe-z-cms'),
         },
         {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
+          text: 'Administracja strony',
+          href: getPermalink('/strony-internetowe/administracja-stron'),
         },
       ],
     },
     {
-      text: 'Landing',
+      text: 'Marketing',
       links: [
         {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
+          text: 'Pozycjonowanie SEO',
+          href: getPermalink('/marketing/pozycjonowanie-seo-krakow'),
         },
         {
-          text: 'Long-form Sales',
-          href: getPermalink('/landing/sales'),
+          text: 'Projekty graficzne',
+          href: getPermalink('/marketing/projekty-graficzne'),
         },
+
         {
-          text: 'Click-Through',
-          href: getPermalink('/landing/click-through'),
-        },
-        {
-          text: 'Product Details (or Services)',
-          href: getPermalink('/landing/product'),
-        },
-        {
-          text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
-        },
-        {
-          text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
+          text: 'Pisanie tekstów',
+          href: getPermalink('/marketing/pisanie-tekstow'),
         },
       ],
+    },
+    {
+      text: 'Cennik',
+      href: getPermalink('/cennik'),
+    },
+    {
+      text: 'Realizacje',
+      href: getPermalink('/realizacje'),
     },
     {
       text: 'Blog',
-      href: getBlogPermalink(),
-      
+      href: getBlogPermalink('/blog'),
     },
     {
       text: 'Kontakt',
-      href: getPermalink('/contact'),
+      href: getPermalink('/kontakt'),
     },
   ],
   actions: [{ text: 'Darmowa Wycena', href: getPermalink('/contact') }],
@@ -85,15 +73,15 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: 'Strony internetowe',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        { text: 'Strony internetowe Kraków', href: '#' },
+        { text: 'Strony internetowe Krzeszowice', href: '#' },
+        { text: 'Strony internetowe ', href: '#' },
+        { text: 'Strony internetowe', href: '#' },
+        { text: 'Strony internetowe Chrzanów', href: '#' },
+        { text: 'Strony internetowe Małopolska', href: '#' },
+        { text: 'Strony internetowe', href: '#' },
       ],
     },
     {
@@ -117,11 +105,11 @@ export const footerData = {
       ],
     },
     {
-      title: 'Company',
+      title: 'O nas',
       links: [
-        { text: 'About', href: '#' },
+        { text: 'O nas', href: '#' },
         { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
+        { text: 'Cennik', href: '#' },
         { text: 'Press', href: '#' },
         { text: 'Inclusion', href: '#' },
         { text: 'Social Impact', href: '#' },
@@ -130,8 +118,8 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'Regulamin usług', href: getPermalink('/terms') },
+    { text: 'Polityka prywatności', href: getPermalink('/privacy') },
   ],
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
@@ -141,7 +129,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],
   footNote: `
-    <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
+    Copyrights Fachowe Strony 2025 · All rights reserved.
   `,
 };

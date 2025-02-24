@@ -1,0 +1,188 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Administracja stron WWW',
+  description:
+    'Kompleksowa administracja stron internetowych: aktualizacje, backupy, monitoring, bezpieczeństwo i wsparcie techniczne. Zadbaj o stabilność i wydajność swojej witryny.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget -->
+  <Hero
+    tagline="Administracja stron WWW"
+    image={{
+      src: 'https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Administracja stron internetowych',
+    }}
+  >
+    <Fragment slot="title">
+      Kompleksowa administracja <br />
+      <span class="text-accent dark:text-white highlight">Twojej strony internetowej</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Zapewniamy wsparcie techniczne, regularne aktualizacje, backupy, monitoring bezpieczeństwa oraz optymalizację
+      wydajności Twojej witryny.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget -->
+  <Stats
+    title="Nasze osiągnięcia"
+    stats={[
+      { title: 'Lat na rynku', amount: '12' },
+      { title: 'Obsłużonych stron', amount: '500+' },
+      { title: 'Zadowolonych klientów', amount: '450+' },
+      { title: 'Realizowanych projektów', amount: '100+' },
+    ]}
+  />
+
+  <!-- Features3 Widget (Oferta Administracji) -->
+  <Features3
+    title="Nasza oferta administracji"
+    subtitle="Profesjonalna obsługa Twojej witryny"
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Aktualizacje treści',
+        description: 'Regularne aktualizowanie zawartości, aby Twoja strona była zawsze na bieżąco.',
+        icon: 'tabler:edit',
+      },
+      {
+        title: 'Bezpieczeństwo',
+        description: 'Monitorujemy i zabezpieczamy witrynę przed zagrożeniami, stosując najnowsze technologie.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Backup i odzyskiwanie',
+        description: 'Tworzymy regularne kopie zapasowe, gwarantujące szybkie odzyskanie danych w razie awarii.',
+        icon: 'tabler:database',
+      },
+    ]}
+  />
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Optymalizacja wydajności',
+        description: 'Analizujemy i poprawiamy szybkość ładowania strony dla lepszego doświadczenia użytkowników.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Wsparcie techniczne',
+        description: 'Nasz zespół ekspertów jest gotowy rozwiązać każdy problem techniczny.',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Monitoring i raportowanie',
+        description: 'Stały nadzór nad działaniem witryny oraz regularne raporty o jej stanie.',
+        icon: 'tabler:chart-line',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Wsparcie techniczne i monitoring',
+    }}
+  />
+
+  <!-- Steps2 Widget (Proces administracji) -->
+  <Steps2
+    title="Jak działamy?"
+    subtitle="Nasz proces administracji gwarantuje bezpieczeństwo i stabilność Twojej witryny"
+    items={[
+      {
+        title: 'Analiza',
+        description: 'Dokładnie oceniamy stan techniczny Twojej strony oraz identyfikujemy obszary do poprawy.',
+      },
+      {
+        title: 'Planowanie',
+        description: 'Opracowujemy harmonogram aktualizacji, backupów i działań zabezpieczających.',
+      },
+      {
+        title: 'Wdrożenie',
+        description: 'Realizujemy ustalone działania z wykorzystaniem najnowszych technologii i narzędzi.',
+      },
+      {
+        title: 'Monitoring',
+        description: 'Ciągły nadzór nad działaniem strony i szybka reakcja na wszelkie problemy.',
+      },
+    ]}
+  />
+
+  <!-- Dłuższy tekst SEO / opis -->
+  <section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">Profesjonalna administracja stron WWW</h2>
+      <p class="mb-4 text-lg text-gray-700">
+        Nasza usługa administracji stron internetowych to kompleksowe rozwiązanie, które gwarantuje nieprzerwane
+        działanie Twojej witryny. Oferujemy regularne aktualizacje, backupy, monitoring bezpieczeństwa oraz wsparcie
+        techniczne, dzięki czemu możesz skupić się na rozwoju swojego biznesu.
+      </p>
+      <p class="mb-4 text-lg text-gray-700">
+        Zadbaj o bezpieczeństwo i wydajność swojej strony, wybierając nasze usługi administracji. Niezależnie od tego,
+        czy Twoja firma mieści się w Katowicach, Krakowie, Chrzanowie, Trzebini czy innych największych miastach
+        Małopolski, nasze rozwiązania są dostosowane do specyfiki lokalnego rynku. Dzięki stałej opiece technicznej,
+        Twoja witryna będzie zawsze aktualna i zabezpieczona przed zagrożeniami.
+      </p>
+      <p class="text-lg text-gray-700">
+        Postaw na profesjonalizm i niezawodność – z nami administracja strony internetowej staje się prosta, skuteczna i
+        w pełni dostosowana do Twoich potrzeb.
+      </p>
+    </div>
+  </section>
+
+  <!-- Lokalizacje usług administracji -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">Obsługujemy największe miasta Małopolski</h2>
+      <p class="mb-4 text-lg text-gray-700">
+        Świadczymy usługi administracji stron internetowych w następujących lokalizacjach:
+      </p>
+      <ul class="list-disc list-inside text-gray-700 text-lg mb-4">
+        <li>Katowice</li>
+        <li>Kraków</li>
+        <li>Chrzanów</li>
+        <li>Trzebinia</li>
+        <li>Tarnów</li>
+        <li>Nowy Sącz</li>
+        <li>Oświęcim</li>
+        <li>Wieliczka</li>
+        <li>Bochnia</li>
+        <li>Zakopane</li>
+        <li>Myślenice</li>
+      </ul>
+      <p class="text-lg text-gray-700">
+        Jeśli nie widzisz Twojej lokalizacji na liście, skontaktuj się z nami – oferujemy usługi administracji również w
+        innych miastach regionu.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features2 Widget (Kontakt) -->
+  <Features2
+    title="Skontaktuj się z nami"
+    tagline="Jesteśmy gotowi pomóc Ci w administracji Twojej witryny"
+    columns={2}
+    items={[
+      {
+        title: 'Konsultacja online',
+        description: 'Umów się na darmową konsultację, aby omówić szczegóły naszej oferty administracji stron.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Telefon kontaktowy',
+        description: 'Skontaktuj się z naszym działem wsparcia, aby uzyskać więcej informacji.',
+        icon: 'tabler:phone',
+      },
+    ]}
+  />
+</Layout>

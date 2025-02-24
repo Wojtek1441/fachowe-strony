@@ -1,0 +1,126 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Portfolio from '~/components/widgets/Portfolio.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Nasze Realizacje - Fachowe Strony',
+  description:
+    'Zobacz nasze realizacje stron internetowych, sklepów e-commerce, identyfikacji wizualnej i projektów graficznych.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget -->
+  <Hero
+    tagline="Nasze realizacje"
+    image={{
+      src: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Realizacje stron internetowych',
+    }}
+  >
+    <Fragment slot="title">
+      Portfolio <br />
+      <span class="text-accent dark:text-white highlight">naszych projektów</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Tworzymy nowoczesne i skuteczne strony internetowe oraz sklepy e-commerce. Sprawdź nasze realizacje i przekonaj
+      się o jakości naszej pracy.
+    </Fragment>
+  </Hero>
+
+  <!-- Portfolio Widget -->
+  <Portfolio
+    title="Wybrane realizacje"
+    subtitle="Zobacz nasze projekty i przekonaj się o naszej jakości."
+    columns={3}
+    items={[
+      {
+        title: 'Strona dla kancelarii prawnej',
+        description: 'Nowoczesna, elegancka strona internetowa dla kancelarii prawnej w Krakowie.',
+        image:
+          'https://images.unsplash.com/photo-1559028012-481c04fa7024?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
+      },
+      {
+        title: 'Sklep e-commerce z modą',
+        description: 'Responsywny sklep internetowy na WooCommerce dla marki modowej.',
+        image:
+          'https://images.unsplash.com/photo-1556761175-4b46a572b786?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
+      },
+      {
+        title: 'Landing Page dla startupu',
+        description: 'Dynamiczny landing page wspierający kampanię marketingową startupu IT.',
+        image:
+          'https://images.unsplash.com/photo-1531497865144-0464ef8fb9a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
+      },
+      {
+        title: 'Strona dla hotelu',
+        description: 'Strona internetowa z systemem rezerwacji online dla hotelu w Małopolsce.',
+        image:
+          'https://images.unsplash.com/photo-1560221326-037f1b87f917?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
+      },
+      {
+        title: 'Portal informacyjny',
+        description: 'Rozbudowany serwis z wiadomościami lokalnymi i sekcją blogową.',
+        image:
+          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
+      },
+      {
+        title: 'Strona dla agencji nieruchomości',
+        description: 'Profesjonalna strona internetowa prezentująca oferty nieruchomości.',
+        image:
+          'https://images.unsplash.com/photo-1567446538182-257bf91a3795?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
+      },
+    ]}
+  />
+
+  <!-- SEO Section (Tekst dla wyszukiwarek) -->
+  <section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">Nasze realizacje stron internetowych – Kraków i Małopolska</h2>
+      <p class="mb-4 text-lg text-gray-700">
+        Tworzymy <strong>nowoczesne strony internetowe</strong> dostosowane do potrzeb naszych klientów. W naszym portfolio
+        znajdują się <strong
+          >strony dla firm z Krakowa, Tarnowa, Nowego Sącza, Oświęcimia, Chrzanowa, Zakopanego, Wieliczki, Bochni,
+          Myślenic i Olkusza</strong
+        >. Każdy projekt dostosowujemy do branży, w której działa klient, dbając o wysoką jakość wykonania i zgodność z
+        najnowszymi trendami w UX/UI.
+      </p>
+      <p class="mb-4 text-lg text-gray-700">
+        Oferujemy realizacje <strong>stron internetowych z systemem CMS</strong>, takich jak WordPress, Joomla, Strapi
+        czy Umbraco. Nasze realizacje obejmują również <strong
+          >sklepy e-commerce na WooCommerce, PrestaShop i Shopify</strong
+        >. Wszystkie nasze strony są w pełni responsywne, zoptymalizowane pod SEO i przygotowane do integracji z
+        narzędziami analitycznymi.
+      </p>
+      <p class="mb-4 text-lg text-gray-700">
+        Specjalizujemy się w <strong>projektowaniu graficznym</strong> – tworzymy nie tylko strony internetowe, ale również
+        branding firmowy, logo i materiały reklamowe. Z nami Twoja firma zyska profesjonalny wizerunek w sieci.
+      </p>
+      <p class="mb-4 text-lg text-gray-700">
+        Jeśli chcesz dołączyć do grona naszych zadowolonych klientów, skontaktuj się z nami! Zrealizujemy dla Ciebie
+        stronę internetową, która będzie działać sprawnie i skutecznie przyciągać klientów.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features2 Widget (Kontakt) -->
+  <Features2
+    title="Masz pytania?"
+    tagline="Skontaktuj się z nami"
+    columns={2}
+    items={[
+      {
+        title: 'Porozmawiaj z ekspertem',
+        description: 'Dowiedz się więcej o naszych realizacjach i możliwościach współpracy.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Zamów stronę internetową',
+        description: 'Skontaktuj się z nami i zamów stronę dopasowaną do Twojej firmy.',
+        icon: 'tabler:phone',
+      },
+    ]}
+  />
+</Layout>
