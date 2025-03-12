@@ -1,6 +1,6 @@
 site:
   name: Fachowe Strony
-  site: 'https://fachowe-strony.pl'
+  site: 'https://www.fachowestrony.pl'
   base: '/'
   trailingSlash: false
 
@@ -16,7 +16,7 @@ metadata:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Fachowe Strony Kraków
     images:
       - url: '~/assets/images/default.png'
         width: 1200
