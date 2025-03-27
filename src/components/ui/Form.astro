@@ -5,7 +5,23 @@ import Button from '~/components/ui/Button.astro';
 const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props;
 ---
 
-<form>
+<form action="https://www.form-to-email.com/api/s/JZyA1QySaCrr" method="POST">
+  <label
+    >Email address:
+    <input type="email" name="email" required />
+  </label>
+  <label
+    >Name:
+    <input type="text" name="name" required />
+  </label>
+  <label
+    >Message:
+    <textarea name="message" required></textarea>
+  </label>
+  <button>Submit</button>
+</form>
+
+<form action="https://www.form-to-email.com/api/s/JZyA1QySaCrr" method="POST">
   {
     inputs &&
       inputs.map(

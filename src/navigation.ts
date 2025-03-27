@@ -87,9 +87,9 @@ export const footerData = {
     {
       title: 'Platform',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
+        { text: 'Strony internetowe Modlniczka', href: '#' },
+        { text: 'Strony internetowe Modlnica', href: '#' },
+        { text: 'Strony internetowe', href: '#' },
         { text: 'Electron', href: '#' },
         { text: 'AstroWind Desktop', href: '#' },
       ],
