@@ -2,6 +2,11 @@ import { isUnpicCompatible, unpicOptimizer, astroAsseetsOptimizer } from './imag
 import type { ImageMetadata } from 'astro';
 import type { OpenGraph } from '@astrolib/seo';
 
+// Only allow these image formats
+const validFormats = ['svg', 'avif', 'png', 'webp', 'jpeg', 'jpg', 'tiff', 'gif'] as const;
+type ImageFormat = typeof validFormats[number];
+
+// Load local images using Vite's glob import
 const load = async function () {
   let images: Record<string, () => Promise<unknown>> | undefined = undefined;
   try {
@@ -19,6 +24,7 @@ export const fetchLocalImages = async () => {
   return _images;
 };
 
+// Used to resolve image paths to ImageMetadata (or leave string URLs untouched)
 export const findImage = async (
   imagePath?: string | ImageMetadata | null
 ): Promise<string | ImageMetadata | undefined | null> => {
@@ -42,14 +48,19 @@ export const findImage = async (
     : null;
 };
 
-// ✅ Helper to build a valid ImageMetadata object
-const toImageMetadata = (img: { src: string; width: number }, height: number, format: string): ImageMetadata => ({
+// Ensure we're returning a valid ImageMetadata object
+const toImageMetadata = (
+  img: { src: string; width: number },
+  height: number,
+  format: ImageFormat
+): ImageMetadata => ({
   src: img.src,
   width: img.width,
   height,
   format,
 });
 
+// Adapt OG image data to ensure it's valid and optimized
 export const adaptOpenGraphImages = async (
   openGraph: OpenGraph = {},
   astroSite: URL | undefined = new URL('')
@@ -61,6 +72,7 @@ export const adaptOpenGraphImages = async (
   const images = openGraph.images;
   const defaultWidth = 1200;
   const defaultHeight = 626;
+  const defaultFormat: ImageFormat = 'jpg';
 
   const adaptedImages = await Promise.all(
     images.map(async (image) => {
@@ -77,15 +89,23 @@ export const adaptOpenGraphImages = async (
           (resolvedImage.startsWith('http://') || resolvedImage.startsWith('https://')) &&
           isUnpicCompatible(resolvedImage)
         ) {
-          const optimized = (await unpicOptimizer(resolvedImage, [defaultWidth], defaultWidth, defaultHeight, 'jpg'))[0];
-          _image = toImageMetadata(optimized, defaultHeight, 'jpg');
+          const optimized = (await unpicOptimizer(resolvedImage, [defaultWidth], defaultWidth, defaultHeight, defaultFormat))[0];
+          _image = toImageMetadata(optimized, defaultHeight, defaultFormat);
         } else if (resolvedImage && typeof resolvedImage !== 'string') {
           const dimensions =
             resolvedImage?.width <= defaultWidth
               ? [resolvedImage?.width, resolvedImage?.height]
               : [defaultWidth, defaultHeight];
-          const optimized = (await astroAsseetsOptimizer(resolvedImage, [dimensions[0]], dimensions[0], dimensions[1], 'jpg'))[0];
-          _image = toImageMetadata(optimized, dimensions[1], 'jpg');
+
+          const optimized = (await astroAsseetsOptimizer(
+            resolvedImage,
+            [dimensions[0]],
+            dimensions[0],
+            dimensions[1],
+            defaultFormat
+          ))[0];
+
+          _image = toImageMetadata(optimized, dimensions[1], defaultFormat);
         }
 
         if (typeof _image === 'object') {
@@ -103,5 +123,8 @@ export const adaptOpenGraphImages = async (
     })
   );
 
-  return { ...openGraph, ...(adaptedImages ? { images: adaptedImages } : {}) };
+  return {
+    ...openGraph,
+    ...(adaptedImages ? { images: adaptedImages } : {}),
+  };
 };
