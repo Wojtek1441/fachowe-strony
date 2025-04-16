@@ -1,20 +1,20 @@
 import { c as createComponent, r as renderTemplate, m as maybeRenderHead, a as renderComponent, d as createAstro, b as addAttribute, u as unescapeHTML, F as Fragment } from '../chunks/astro/server_DoRQTvF3.mjs';
 import 'kleur/colors';
-import { a as $$Button, $ as $$PageLayout } from '../chunks/PageLayout_BqGMkCjB.mjs';
-import { $ as $$Hero } from '../chunks/Hero_6C-coMw0.mjs';
+import { a as $$Button, $ as $$PageLayout } from '../chunks/PageLayout_BoGVQbiE.mjs';
+import { $ as $$Hero } from '../chunks/Hero_B4O1xtOz.mjs';
 import { $ as $$Icon } from '../chunks/ToggleTheme_CsIZsdKu.mjs';
-import { $ as $$Features, a as $$FAQs } from '../chunks/FAQs_OciW-V8S.mjs';
-import { $ as $$Features2 } from '../chunks/Features2_BoUlr4Xu.mjs';
+import { $ as $$Features, a as $$FAQs } from '../chunks/FAQs_8kERap6n.mjs';
+import { $ as $$Features2 } from '../chunks/Features2_AP5ATuMA.mjs';
 import { $ as $$WidgetWrapper } from '../chunks/WidgetWrapper_lVxkQkUJ.mjs';
 import { twMerge } from 'tailwind-merge';
 import { $ as $$Headline } from '../chunks/Headline_DRT1S6-V.mjs';
-import { $ as $$Image } from '../chunks/Image_CqLdW9wo.mjs';
-import { $ as $$ItemGrid } from '../chunks/ItemGrid_D7QwKkRv.mjs';
-import { $ as $$Grid } from '../chunks/Grid_DOjZ55RW.mjs';
+import { $ as $$Image } from '../chunks/Image_CNVk0u0a.mjs';
+import { $ as $$ItemGrid } from '../chunks/ItemGrid_Zspt5oQa.mjs';
+import { $ as $$Grid } from '../chunks/Grid_aHxDLbvJ.mjs';
 import { c as getBlogPermalink } from '../chunks/consts_9XgGQQB-.mjs';
-import { h as findLatestPosts } from '../chunks/blog_B-OTp2KY.mjs';
+import { h as findLatestPosts } from '../chunks/blog_Bmd5DnUF.mjs';
 import { $ as $$Stats } from '../chunks/Stats_CIgV0Wbe.mjs';
-import { $ as $$CallToAction } from '../chunks/CallToAction_CBGzScZ_.mjs';
+import { $ as $$CallToAction } from '../chunks/CallToAction_CBqllXVB.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Note = createComponent(($$result, $$props, $$slots) => {

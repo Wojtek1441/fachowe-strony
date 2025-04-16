@@ -1,7 +1,7 @@
 import { c as createComponent, r as renderTemplate, a as renderComponent, F as Fragment, m as maybeRenderHead } from '../chunks/astro/server_DoRQTvF3.mjs';
 import 'kleur/colors';
-import { $ as $$Hero } from '../chunks/Hero_6C-coMw0.mjs';
-import { $ as $$PageLayout } from '../chunks/PageLayout_BqGMkCjB.mjs';
+import { $ as $$Hero } from '../chunks/Hero_B4O1xtOz.mjs';
+import { $ as $$PageLayout } from '../chunks/PageLayout_BoGVQbiE.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Cennik = createComponent(($$result, $$props, $$slots) => {

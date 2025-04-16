@@ -1,9 +1,9 @@
 import { d as createAstro, c as createComponent, r as renderTemplate, a as renderComponent, m as maybeRenderHead, F as Fragment, u as unescapeHTML } from './astro/server_DoRQTvF3.mjs';
 import 'kleur/colors';
 import { $ as $$Headline } from './Headline_DRT1S6-V.mjs';
-import { $ as $$ItemGrid } from './ItemGrid_D7QwKkRv.mjs';
+import { $ as $$ItemGrid } from './ItemGrid_Zspt5oQa.mjs';
 import { $ as $$WidgetWrapper } from './WidgetWrapper_lVxkQkUJ.mjs';
-import { $ as $$Image } from './Image_CqLdW9wo.mjs';
+import { $ as $$Image } from './Image_CNVk0u0a.mjs';
 
 const $$Astro = createAstro("https://fachowe-strony.pl");
 const $$Features3 = createComponent(async ($$result, $$props, $$slots) => {

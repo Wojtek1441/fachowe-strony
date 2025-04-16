@@ -3,7 +3,7 @@ import 'kleur/colors';
 import { $ as $$Icon } from './ToggleTheme_CsIZsdKu.mjs';
 import { $ as $$WidgetWrapper } from './WidgetWrapper_lVxkQkUJ.mjs';
 import { $ as $$Headline } from './Headline_DRT1S6-V.mjs';
-import { a as $$Button } from './PageLayout_BqGMkCjB.mjs';
+import { a as $$Button } from './PageLayout_BoGVQbiE.mjs';
 
 const $$Astro = createAstro("https://fachowe-strony.pl");
 const $$Steps2 = createComponent(async ($$result, $$props, $$slots) => {

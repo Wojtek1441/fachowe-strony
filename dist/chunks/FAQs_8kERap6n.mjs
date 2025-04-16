@@ -1,7 +1,7 @@
 import { d as createAstro, c as createComponent, r as renderTemplate, a as renderComponent } from './astro/server_DoRQTvF3.mjs';
 import 'kleur/colors';
 import { $ as $$WidgetWrapper } from './WidgetWrapper_lVxkQkUJ.mjs';
-import { $ as $$ItemGrid } from './ItemGrid_D7QwKkRv.mjs';
+import { $ as $$ItemGrid } from './ItemGrid_Zspt5oQa.mjs';
 import { $ as $$Headline } from './Headline_DRT1S6-V.mjs';
 
 const $$Astro$1 = createAstro("https://fachowe-strony.pl");

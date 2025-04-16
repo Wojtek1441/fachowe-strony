@@ -1,7 +1,7 @@
 import { d as createAstro, c as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, a as renderComponent } from './astro/server_DoRQTvF3.mjs';
 import 'kleur/colors';
-import { $ as $$Image } from './Image_CqLdW9wo.mjs';
-import { f as findImage } from './Layout_DIg3lbDe.mjs';
+import { $ as $$Image } from './Image_CNVk0u0a.mjs';
+import { f as findImage } from './Layout_D891GC3i.mjs';
 import { a as getPermalink } from './consts_9XgGQQB-.mjs';
 
 const $$Astro$1 = createAstro("https://fachowe-strony.pl");

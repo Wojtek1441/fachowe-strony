@@ -1,8 +1,8 @@
 import { c as createComponent, r as renderTemplate, a as renderComponent } from '../../chunks/astro/server_DoRQTvF3.mjs';
 import 'kleur/colors';
-import { $ as $$LandingLayout } from '../../chunks/LandingLayout_DHjwKYKY.mjs';
-import { $ as $$Hero } from '../../chunks/Hero_6C-coMw0.mjs';
-import { $ as $$CallToAction } from '../../chunks/CallToAction_CBGzScZ_.mjs';
+import { $ as $$LandingLayout } from '../../chunks/LandingLayout_B38Y_APR.mjs';
+import { $ as $$Hero } from '../../chunks/Hero_B4O1xtOz.mjs';
+import { $ as $$CallToAction } from '../../chunks/CallToAction_CBqllXVB.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$LeadGeneration = createComponent(($$result, $$props, $$slots) => {

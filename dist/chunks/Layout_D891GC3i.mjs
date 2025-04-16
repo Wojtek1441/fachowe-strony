@@ -785,7 +785,7 @@ const adaptOpenGraphImages = async (openGraph = {}, astroSite = new URL("")) => 
             url: ""
           };
         }
-        let _image;
+        let _image = resolvedImage;
         if (typeof resolvedImage === "string" && (resolvedImage.startsWith("http://") || resolvedImage.startsWith("https://")) && isUnpicCompatible(resolvedImage)) {
           _image = (await unpicOptimizer(resolvedImage, [defaultWidth], defaultWidth, defaultHeight, "jpg"))[0];
         } else if (resolvedImage) {

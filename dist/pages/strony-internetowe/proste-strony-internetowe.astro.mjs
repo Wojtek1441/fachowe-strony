@@ -1,11 +1,11 @@
 import { c as createComponent, r as renderTemplate, a as renderComponent, F as Fragment } from '../../chunks/astro/server_DoRQTvF3.mjs';
 import 'kleur/colors';
-import { $ as $$Features2 } from '../../chunks/Features2_BoUlr4Xu.mjs';
-import { $ as $$Features3 } from '../../chunks/Features3_BTxVxLgG.mjs';
-import { $ as $$Hero } from '../../chunks/Hero_6C-coMw0.mjs';
+import { $ as $$Features2 } from '../../chunks/Features2_AP5ATuMA.mjs';
+import { $ as $$Features3 } from '../../chunks/Features3_CKrwx4zR.mjs';
+import { $ as $$Hero } from '../../chunks/Hero_B4O1xtOz.mjs';
 import { $ as $$Stats } from '../../chunks/Stats_CIgV0Wbe.mjs';
-import { $ as $$Steps2 } from '../../chunks/Steps2_C2x_Yqln.mjs';
-import { $ as $$PageLayout } from '../../chunks/PageLayout_BqGMkCjB.mjs';
+import { $ as $$Steps2 } from '../../chunks/Steps2_C58D9-0S.mjs';
+import { $ as $$PageLayout } from '../../chunks/PageLayout_BoGVQbiE.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$ProsteStronyInternetowe = createComponent(($$result, $$props, $$slots) => {

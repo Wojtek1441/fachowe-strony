@@ -1,7 +1,7 @@
 import { d as createAstro, c as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, a as renderComponent, u as unescapeHTML } from './astro/server_DoRQTvF3.mjs';
 import 'kleur/colors';
 import { twMerge } from 'tailwind-merge';
-import { a as $$Button } from './PageLayout_BqGMkCjB.mjs';
+import { a as $$Button } from './PageLayout_BoGVQbiE.mjs';
 import { $ as $$Icon } from './ToggleTheme_CsIZsdKu.mjs';
 
 const $$Astro = createAstro("https://fachowe-strony.pl");

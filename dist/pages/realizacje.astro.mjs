@@ -1,17 +1,13 @@
-import { d as createAstro, c as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, a as renderComponent, F as Fragment } from '../chunks/astro/server_DoRQTvF3.mjs';
+import { c as createComponent, r as renderTemplate, a as renderComponent, F as Fragment, m as maybeRenderHead } from '../chunks/astro/server_DoRQTvF3.mjs';
 import 'kleur/colors';
-import { $ as $$Hero } from '../chunks/Hero_6C-coMw0.mjs';
-import { $ as $$PageLayout } from '../chunks/PageLayout_BqGMkCjB.mjs';
+import { $ as $$Hero } from '../chunks/Hero_B4O1xtOz.mjs';
+import { $ as $$PageLayout } from '../chunks/PageLayout_BoGVQbiE.mjs';
 import 'clsx';
-import { $ as $$Features2 } from '../chunks/Features2_BoUlr4Xu.mjs';
+import { $ as $$Features2 } from '../chunks/Features2_AP5ATuMA.mjs';
 export { renderers } from '../renderers.mjs';
 
-const $$Astro = createAstro("https://fachowe-strony.pl");
 const $$Portfolio = createComponent(($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
-  Astro2.self = $$Portfolio;
-  const { title, subtitle, columns = 3, items = [] } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class="py-12"> <div class="container mx-auto px-4"> <h2 class="text-3xl font-bold text-center mb-4">${title}</h2> ${subtitle && renderTemplate`<p class="text-lg text-center text-gray-600 mb-8">${subtitle}</p>`} <div${addAttribute(`grid grid-cols-1 md:grid-cols-${columns} gap-8`, "class")}> ${items.map((item) => renderTemplate`<div class="bg-white shadow-lg rounded-lg overflow-hidden"> <img${addAttribute(item.image, "src")}${addAttribute(item.title, "alt")} class="w-full h-48 object-cover"> <div class="p-4"> <h3 class="text-xl font-semibold">${item.title}</h3> <p class="text-gray-600">${item.description}</p> </div> </div>`)} </div> </div> </section>`;
+  return renderTemplate``;
 }, "/workspaces/fachowe-strony/src/components/widgets/Portfolio.astro", undefined);
 
 const $$Realizacje = createComponent(($$result, $$props, $$slots) => {

@@ -2,7 +2,7 @@ import { d as createAstro, c as createComponent, r as renderTemplate, a as rende
 import 'kleur/colors';
 import { $ as $$WidgetWrapper } from './WidgetWrapper_lVxkQkUJ.mjs';
 import { $ as $$Headline } from './Headline_DRT1S6-V.mjs';
-import { a as $$Button } from './PageLayout_BqGMkCjB.mjs';
+import { a as $$Button } from './PageLayout_BoGVQbiE.mjs';
 
 const $$Astro = createAstro("https://fachowe-strony.pl");
 const $$CallToAction = createComponent(async ($$result, $$props, $$slots) => {

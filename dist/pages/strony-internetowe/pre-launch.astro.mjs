@@ -1,9 +1,9 @@
 import { d as createAstro, c as createComponent, r as renderTemplate, m as maybeRenderHead, s as spreadAttributes, e as renderSlot, a as renderComponent, u as unescapeHTML, F as Fragment } from '../../chunks/astro/server_DoRQTvF3.mjs';
 import 'kleur/colors';
-import { $ as $$LandingLayout } from '../../chunks/LandingLayout_DHjwKYKY.mjs';
-import { $ as $$Image } from '../../chunks/Image_CqLdW9wo.mjs';
-import { a as $$Button } from '../../chunks/PageLayout_BqGMkCjB.mjs';
-import { $ as $$CallToAction } from '../../chunks/CallToAction_CBGzScZ_.mjs';
+import { $ as $$LandingLayout } from '../../chunks/LandingLayout_B38Y_APR.mjs';
+import { $ as $$Image } from '../../chunks/Image_CNVk0u0a.mjs';
+import { a as $$Button } from '../../chunks/PageLayout_BoGVQbiE.mjs';
+import { $ as $$CallToAction } from '../../chunks/CallToAction_CBqllXVB.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Astro = createAstro("https://fachowe-strony.pl");

@@ -1,6 +1,6 @@
 import { d as createAstro, c as createComponent, r as renderTemplate, m as maybeRenderHead, s as spreadAttributes, e as renderSlot, a as renderComponent, u as unescapeHTML, F as Fragment } from './astro/server_DoRQTvF3.mjs';
-import { $ as $$Image } from './Image_CqLdW9wo.mjs';
-import { a as $$Button } from './PageLayout_BqGMkCjB.mjs';
+import { $ as $$Image } from './Image_CNVk0u0a.mjs';
+import { a as $$Button } from './PageLayout_BoGVQbiE.mjs';
 
 const $$Astro = createAstro("https://fachowe-strony.pl");
 const $$Hero = createComponent(async ($$result, $$props, $$slots) => {

@@ -1,6 +1,6 @@
 import { d as createAstro, c as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, s as spreadAttributes, a as renderComponent, u as unescapeHTML, F as Fragment, e as renderSlot } from './astro/server_DoRQTvF3.mjs';
 import 'kleur/colors';
-import { $ as $$Layout } from './Layout_DIg3lbDe.mjs';
+import { $ as $$Layout } from './Layout_D891GC3i.mjs';
 import { $ as $$Icon, a as $$ToggleTheme } from './ToggleTheme_CsIZsdKu.mjs';
 import { $ as $$Logo } from './Logo_DbMI3o3E.mjs';
 import 'clsx';

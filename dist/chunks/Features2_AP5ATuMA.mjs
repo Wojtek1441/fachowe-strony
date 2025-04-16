@@ -4,7 +4,7 @@ import { $ as $$WidgetWrapper } from './WidgetWrapper_lVxkQkUJ.mjs';
 import { $ as $$Headline } from './Headline_DRT1S6-V.mjs';
 import { $ as $$Icon } from './ToggleTheme_CsIZsdKu.mjs';
 import { twMerge } from 'tailwind-merge';
-import { a as $$Button } from './PageLayout_BqGMkCjB.mjs';
+import { a as $$Button } from './PageLayout_BoGVQbiE.mjs';
 
 const $$Astro$1 = createAstro("https://fachowe-strony.pl");
 const $$ItemGrid2 = createComponent(($$result, $$props, $$slots) => {
