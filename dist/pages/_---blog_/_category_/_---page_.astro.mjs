@@ -1,6 +1,6 @@
 import { d as createAstro, c as createComponent, r as renderTemplate, a as renderComponent, m as maybeRenderHead } from '../../../chunks/astro/server_DoRQTvF3.mjs';
 import 'kleur/colors';
-import { b as blogCategoryRobots, a as getStaticPathsBlogCategory } from '../../../chunks/blog_Dr0HREac.mjs';
+import { b as blogCategoryRobots, g as getStaticPathsBlogCategory } from '../../../chunks/blog_B-OTp2KY.mjs';
 import { $ as $$PageLayout } from '../../../chunks/PageLayout_BqGMkCjB.mjs';
 import { $ as $$Headline, a as $$List, b as $$Pagination } from '../../../chunks/Pagination_Cn7cKoWC.mjs';
 export { renderers } from '../../../renderers.mjs';

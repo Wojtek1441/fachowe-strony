@@ -6,7 +6,7 @@ import { $ as $$Icon } from '../chunks/ToggleTheme_CsIZsdKu.mjs';
 import { $ as $$Image } from '../chunks/Image_CqLdW9wo.mjs';
 import { $ as $$Tags } from '../chunks/Tags_jO5uYB5D.mjs';
 import { b as getFormattedDate, a as getPermalink, c as getBlogPermalink, I as I18N, d as getCanonical } from '../chunks/consts_9XgGQQB-.mjs';
-import { j as findPostsByIds, k as getRelatedPosts, l as blogPostRobots, g as getStaticPathsBlogPost } from '../chunks/blog_Dr0HREac.mjs';
+import { i as findPostsByIds, j as getRelatedPosts, k as blogPostRobots, l as getStaticPathsBlogPost } from '../chunks/blog_B-OTp2KY.mjs';
 import { f as findImage } from '../chunks/Layout_DIg3lbDe.mjs';
 import { $ as $$Grid } from '../chunks/Grid_DOjZ55RW.mjs';
 import { $ as $$WidgetWrapper } from '../chunks/WidgetWrapper_lVxkQkUJ.mjs';

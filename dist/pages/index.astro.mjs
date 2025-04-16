@@ -12,7 +12,7 @@ import { $ as $$Image } from '../chunks/Image_CqLdW9wo.mjs';
 import { $ as $$ItemGrid } from '../chunks/ItemGrid_D7QwKkRv.mjs';
 import { $ as $$Grid } from '../chunks/Grid_DOjZ55RW.mjs';
 import { c as getBlogPermalink } from '../chunks/consts_9XgGQQB-.mjs';
-import { i as findLatestPosts } from '../chunks/blog_Dr0HREac.mjs';
+import { h as findLatestPosts } from '../chunks/blog_B-OTp2KY.mjs';
 import { $ as $$Stats } from '../chunks/Stats_CIgV0Wbe.mjs';
 import { $ as $$CallToAction } from '../chunks/CallToAction_CBGzScZ_.mjs';
 export { renderers } from '../renderers.mjs';

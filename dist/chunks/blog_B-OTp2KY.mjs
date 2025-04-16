@@ -648,4 +648,4 @@ async function getRelatedPosts(originalPost, maxResults = 4) {
   return selectedPosts;
 }
 
-export { getStaticPathsBlogCategory as a, blogCategoryRobots as b, blogTagRobots as c, getStaticPathsBlogTag as d, getStaticPathsBlogList as e, fetchPosts as f, getStaticPathsBlogPost as g, blogListRobots as h, findLatestPosts as i, findPostsByIds as j, getRelatedPosts as k, blogPostRobots as l };
+export { blogTagRobots as a, blogCategoryRobots as b, getStaticPathsBlogTag as c, getStaticPathsBlogList as d, blogListRobots as e, fetchPosts as f, getStaticPathsBlogCategory as g, findLatestPosts as h, findPostsByIds as i, getRelatedPosts as j, blogPostRobots as k, getStaticPathsBlogPost as l };

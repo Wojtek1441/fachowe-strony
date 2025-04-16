@@ -2,7 +2,7 @@ import { d as createAstro, c as createComponent, r as renderTemplate, a as rende
 import 'kleur/colors';
 import { $ as $$PageLayout } from '../../chunks/PageLayout_BqGMkCjB.mjs';
 import { $ as $$Headline, a as $$List, b as $$Pagination } from '../../chunks/Pagination_Cn7cKoWC.mjs';
-import { e as getStaticPathsBlogList, h as blogListRobots } from '../../chunks/blog_Dr0HREac.mjs';
+import { d as getStaticPathsBlogList, e as blogListRobots } from '../../chunks/blog_B-OTp2KY.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Astro = createAstro("https://fachowe-strony.pl");
