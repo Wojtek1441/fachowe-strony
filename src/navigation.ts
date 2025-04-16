@@ -67,7 +67,7 @@ export const headerData = {
       href: getPermalink('/kontakt'),
     },
   ],
-  actions: [{ text: 'Darmowa Wycena', href: getPermalink('/contact') }],
+  actions: [{ text: 'Darmowa Wycena', href: getPermalink('/kontakt') }],
 };
 
 export const footerData = {
@@ -75,12 +75,12 @@ export const footerData = {
     {
       title: 'Strony internetowe',
       links: [
-        { text: 'Strony internetowe Kraków', href: '#' },
-        { text: 'Strony internetowe Krzeszowice', href: '#' },
-        { text: 'Strony internetowe ', href: '#' },
-        { text: 'Strony internetowe', href: '#' },
-        { text: 'Strony internetowe Chrzanów', href: '#' },
-        { text: 'Strony internetowe Małopolska', href: '#' },
+        { text: 'Strony internetowe Kraków', href: 'strony-internetowe-krakow' },
+        { text: 'Strony internetowe Krzeszowice', href: 'strony-internetowe-krzeszowice' },
+        { text: 'Strony internetowe Zabierzow', href: 'strony-internetowe-zabierzow' },
+        { text: 'Strony internetowe Wieliczka', href: 'strony-internetowe-wieliczka' },
+        { text: 'Strony internetowe Chrzanów', href: 'strony-internetowe-chrzanow' },
+        { text: 'Strony internetowe Małopolska', href: 'strony-internetowe-malopolska' },
         { text: 'Strony internetowe', href: '#' },
       ],
     },
