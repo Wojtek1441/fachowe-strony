@@ -12,7 +12,7 @@ const load = async function () {
   } catch {
     // continue regardless of error
   }
-  
+
   return images;
 };
 
@@ -46,11 +46,7 @@ export const findImage = async (
     : null;
 };
 
-const toImageMetadata = (
-  img: { src: string; width: number },
-  height: number,
-  format: ImageFormat
-): ImageMetadata => ({
+const toImageMetadata = (img: { src: string; width: number }, height: number, format: ImageFormat): ImageMetadata => ({
   src: img.src,
   width: img.width,
   height,
@@ -85,7 +81,9 @@ export const adaptOpenGraphImages = async (
           (resolvedImage.startsWith('http://') || resolvedImage.startsWith('https://')) &&
           isUnpicCompatible(resolvedImage)
         ) {
-          const optimized = (await unpicOptimizer(resolvedImage, [defaultWidth], defaultWidth, defaultHeight, defaultFormat))[0];
+          const optimized = (
+            await unpicOptimizer(resolvedImage, [defaultWidth], defaultWidth, defaultHeight, defaultFormat)
+          )[0];
           _image = toImageMetadata(optimized, defaultHeight, defaultFormat);
         } else if (resolvedImage && typeof resolvedImage !== 'string') {
           const dimensions =
@@ -93,13 +91,9 @@ export const adaptOpenGraphImages = async (
               ? [resolvedImage?.width, resolvedImage?.height]
               : [defaultWidth, defaultHeight];
 
-          const optimized = (await astroAsseetsOptimizer(
-            resolvedImage,
-            [dimensions[0]],
-            dimensions[0],
-            dimensions[1],
-            defaultFormat
-          ))[0];
+          const optimized = (
+            await astroAsseetsOptimizer(resolvedImage, [dimensions[0]], dimensions[0], dimensions[1], defaultFormat)
+          )[0];
 
           _image = toImageMetadata(optimized, dimensions[1], defaultFormat);
         }
