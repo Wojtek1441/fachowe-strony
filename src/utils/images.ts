@@ -2,18 +2,17 @@ import { isUnpicCompatible, unpicOptimizer, astroAsseetsOptimizer } from './imag
 import type { ImageMetadata } from 'astro';
 import type { OpenGraph } from '@astrolib/seo';
 
-// Only allow these image formats
-const validFormats = ['svg', 'avif', 'png', 'webp', 'jpeg', 'jpg', 'tiff', 'gif'] as const;
-type ImageFormat = typeof validFormats[number];
+// Define accepted image formats as a type only
+type ImageFormat = 'svg' | 'avif' | 'png' | 'webp' | 'jpeg' | 'jpg' | 'tiff' | 'gif';
 
-// Load local images using Vite's glob import
 const load = async function () {
   let images: Record<string, () => Promise<unknown>> | undefined = undefined;
   try {
     images = import.meta.glob('~/assets/images/**/*.{jpeg,jpg,png,tiff,webp,gif,svg,JPEG,JPG,PNG,TIFF,WEBP,GIF,SVG}');
-  } catch (error) {
+  } catch {
     // continue regardless of error
   }
+  
   return images;
 };
 
@@ -24,7 +23,6 @@ export const fetchLocalImages = async () => {
   return _images;
 };
 
-// Used to resolve image paths to ImageMetadata (or leave string URLs untouched)
 export const findImage = async (
   imagePath?: string | ImageMetadata | null
 ): Promise<string | ImageMetadata | undefined | null> => {
@@ -48,7 +46,6 @@ export const findImage = async (
     : null;
 };
 
-// Ensure we're returning a valid ImageMetadata object
 const toImageMetadata = (
   img: { src: string; width: number },
   height: number,
@@ -60,7 +57,6 @@ const toImageMetadata = (
   format,
 });
 
-// Adapt OG image data to ensure it's valid and optimized
 export const adaptOpenGraphImages = async (
   openGraph: OpenGraph = {},
   astroSite: URL | undefined = new URL('')
