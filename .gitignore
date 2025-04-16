@@ -21,3 +21,6 @@ pnpm-debug.log*
 pnpm-lock.yaml
 
 .astro
+dist/manifest_C-raYVoZ.mjs
+dist/manifest_D025sA1a.mjs
+src/components/widgets/Portfolio.astro
