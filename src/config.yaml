@@ -3,6 +3,7 @@ site:
   site: 'https://fachowe-strony.pl'
   base: '/'
   trailingSlash: false
+  local-dir: ./dist/
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 
@@ -16,7 +17,12 @@ metadata:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Strony internetowe Kraków
+    title: Fachowe Strony Kraków
+    description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    url: 'https://fachowe-strony.pl'
+    locale: pl_PL
+    type: website
     images:
       - url: '~/assets/images/default.png'
         width: 1200
@@ -28,7 +34,7 @@ metadata:
     cardType: summary_large_image
 
 i18n:
-  language: en
+  language: pl
   textDirection: ltr
 
 apps:
