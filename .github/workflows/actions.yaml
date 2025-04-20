@@ -20,6 +20,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: 🚫 Add .nojekyll to disable Jekyll on GitHub Pages
+        run: touch dist/.nojekyll
+        
       - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
