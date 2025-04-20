@@ -1,26 +1,35 @@
+name: 🚀 Build and Deploy Astro to OVH
+
+on:
+  push:
+    branches:
+      - main  # or your default branch
+
+jobs:
   deploy:
-    name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
-    needs: build  # Ensure the build job has completed
 
     steps:
-      - name: Checkout code
+      - name: 📥 Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js 22
+      - name: 🧰 Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: npm
+          node-version: 20  # or your preferred version
+          cache: 'npm'
 
-      - name: Install dependencies
+      - name: 📦 Install dependencies
         run: npm ci
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: 🔨 Build Astro project
+        run: npm run build
+
+      - name: 🚀 Deploy to OVH via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token
-          publish_dir: ./dist  # Path to the dist folder
-          publish_branch: gh-pages  # The branch to deploy to
-          user_name: 'GitHub Actions'  # User for the commits
-          user_email: 'actions@github.com'  # User email for the commits
+          server: ${{ secrets.OVH_HOSTING_DOMAIN }}
+          username: ${{ secrets.OVH_HOSTING_USER }}
+          password: ${{ secrets.OVH_HOSTING_PASSWORD }}
+          local-dir: dist
+          server-dir: www/
