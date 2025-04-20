@@ -25,14 +25,14 @@ jobs:
       - name: 🔨 Build Astro project
         run: npm run build
 
+      - name: 🚫 Add .nojekyll to disable Jekyll on GitHub Pages
+        run: touch dist/.nojekyll
+
       - name: 🚀 Deploy to OVH via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4
         with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
           server: ${{ secrets.OVH_HOSTING_DOMAIN }}
           username: ${{ secrets.OVH_HOSTING_USER }}
           password: ${{ secrets.OVH_HOSTING_PASSWORD }}
           local-dir: dist
-            publish_dir: ./dist
-       publish_branch: gh-pages  
           server-dir: www/
