@@ -25,6 +25,9 @@ export default defineConfig({
   output: 'static',
   site: 'https://fachowestrony.pl/',
   base: 'dist',
+  build: {
+    inlineStylesheets: 'always',
+  },
   integrations: [
     tailwind({
       applyBaseStyles: false,
@@ -82,9 +85,6 @@ export default defineConfig({
   },
 
   vite: {
-    build: {
-      inlineStylesheets: 'always',
-    },
     resolve: {
       alias: {
         '~': path.resolve(__dirname, './src'),
