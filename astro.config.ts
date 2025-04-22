@@ -82,6 +82,9 @@ export default defineConfig({
   },
 
   vite: {
+    build: {
+      inlineStylesheets: 'always',
+    },
     resolve: {
       alias: {
         '~': path.resolve(__dirname, './src'),
