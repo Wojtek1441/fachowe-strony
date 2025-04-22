@@ -38,7 +38,7 @@ jobs:
       - name: Push files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          local-dir: ./dist
+          local-dir: ./dist/
           server:  	ftp://zbddezi-fs9202fmrA3@ftp.cluster100.hosting.ovh.net:21/
           username: zbddezi-fs9202fmrA3
           password: Wiosna2025
