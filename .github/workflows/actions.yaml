@@ -35,11 +35,13 @@ jobs:
       - name: Verify dist output
         run: ls -la dist
 
-      - name: Upload dist folder as artifact
-        uses: actions/upload-artifact@v4
+      - name: Push files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          name: dist-node-${{ matrix.node-version }}
-          path: ./dist
+          local-dir: ./dist
+          server:  	ftp://zbddezi-fs9202fmrA3@ftp.cluster100.hosting.ovh.net:21/
+          username: zbddezi-fs9202fmrA3
+          password: Wiosna2025
 
   check:
     name: Run checks (Astro, ESLint, Prettier)
