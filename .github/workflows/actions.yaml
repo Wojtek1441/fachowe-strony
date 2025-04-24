@@ -39,7 +39,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           local-dir: ./dist/
-          server:  	ftp://ftp.cluster100.hosting.ovh.net/
+          server:  	ftp.cluster100.hosting.ovh.net
           username: zbddezi-fs9202fmrA3
           password: Wiosna2025
 
