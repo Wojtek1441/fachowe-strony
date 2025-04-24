@@ -41,7 +41,7 @@ jobs:
           local-dir: ./dist/
           server:  	ftp.cluster100.hosting.ovh.net
           username: zbddezi-fs9202fmrA3
-          password: Wiosna2025
+          password: Piatek2025
 
   check:
     name: Run checks (Astro, ESLint, Prettier)
