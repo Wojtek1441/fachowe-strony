@@ -40,8 +40,8 @@ jobs:
         with:
           local-dir: ./dist/
           server:  	ftp.cluster100.hosting.ovh.net
-          username: zbddezi-fs9202fmrA3
-          password: Piatek2025
+          username: ${{ secrets.ftp_user }}
+          password: ${{ secrets.ftp_passwd }}
 
   check:
     name: Run checks (Astro, ESLint, Prettier)
