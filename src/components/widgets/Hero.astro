@@ -18,22 +18,22 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative md:-mt-[76px] not-prose" {...id ? { id } : {}}>
-  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-    <slot name="bg">
+<section class='relative md:-mt-[76px] not-prose' {...id ? { id } : {}}>
+  <div class='absolute inset-0 pointer-events-none' aria-hidden='true'>
+    <slot name='bg'>
       {bg ? <Fragment set:html={bg} /> : null}
     </slot>
   </div>
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
-    <div class="pt-8 md:pt-12">
-      <div class="overflow-hidden">
-        <div class="grid items-center gap-10 px-0 py-10 md:px-2 md:py-14 lg:grid-cols-[1.1fr_0.9fr] lg:px-4 lg:py-20">
-          <div class="text-left">
+  <div class='relative max-w-7xl mx-auto px-4 sm:px-6'>
+    <div class='pt-0 md:pt-[76px] pointer-events-none'></div>
+    <div class='pt-8 md:pt-12'>
+      <div class='overflow-hidden'>
+        <div class='grid items-center gap-10 px-0 py-10 md:px-2 md:py-14 lg:grid-cols-[1.1fr_0.9fr] lg:px-4 lg:py-20'>
+          <div class='text-left'>
             {
               tagline && (
                 <p
-                  class="mb-5 text-sm font-bold uppercase tracking-[0.22em] text-violet-300 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+                  class='mb-5 text-sm font-bold uppercase tracking-[0.22em] text-violet-300 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade'
                   set:html={tagline}
                 />
               )
@@ -41,27 +41,27 @@ const {
             {
               title && (
                 <h1
-                  class="mb-6 max-w-3xl text-[2.8rem] font-bold leading-[0.9] tracking-[-0.06em] text-white md:text-[4rem] lg:text-[4.4rem] intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+                  class='mb-6 max-w-3xl text-[2.8rem] font-bold leading-[0.9] tracking-[-0.06em] text-white md:text-[4rem] lg:text-[4.4rem] intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade'
                   set:html={title}
                 />
               )
             }
-            <div class="max-w-xl">
+            <div class='max-w-xl'>
               {
                 subtitle && (
                   <p
-                    class="mb-8 text-lg leading-relaxed text-slate-300 md:text-xl intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+                    class='mb-8 text-lg leading-relaxed text-slate-300 md:text-xl intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade'
                     set:html={subtitle}
                   />
                 )
               }
               {
                 actions && (
-                  <div class="flex max-w-md flex-col gap-4 sm:flex-row sm:justify-start intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+                  <div class='flex max-w-md flex-col gap-4 sm:flex-row sm:justify-start intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade'>
                     {Array.isArray(actions) ? (
                       actions.map((action) => (
-                        <div class="flex w-full sm:w-auto">
-                          <Button {...(action || {})} class="w-full sm:mb-0" />
+                        <div class='flex w-full sm:w-auto'>
+                          <Button {...(action || {})} class='w-full sm:mb-0' />
                         </div>
                       ))
                     ) : (
@@ -74,35 +74,42 @@ const {
             {content && <Fragment set:html={content} />}
           </div>
 
-          <div class="relative hidden lg:block">
-            <div class="relative mx-auto aspect-[4/5] w-full max-w-[480px] overflow-hidden rounded-[28px] bg-transparent p-6">
-              <div class="absolute -right-8 top-8 h-36 w-36 rounded-full bg-violet-500/10 blur-3xl"></div>
-              <div class="absolute -left-12 bottom-8 h-40 w-40 rounded-full bg-blue-500/10 blur-3xl"></div>
+          <div class='relative hidden lg:block'>
+            <div
+              class='relative mx-auto aspect-[4/5] w-full max-w-[480px] overflow-hidden rounded-[28px] bg-transparent p-6'>
+              <div class='absolute -right-8 top-8 h-36 w-36 rounded-full bg-violet-500/10 blur-3xl'></div>
+              <div class='absolute -left-12 bottom-8 h-40 w-40 rounded-full bg-blue-500/10 blur-3xl'></div>
 
-              <div class="absolute inset-x-6 top-6 h-24 rounded-[22px] border border-white/5 bg-white/0 backdrop-blur-[2px]"></div>
-              <div class="absolute inset-x-10 bottom-8 h-44 rounded-[26px] border border-white/5 bg-slate-900/0 shadow-none backdrop-blur-[2px]"></div>
-              <div class="absolute right-10 top-16 h-20 w-20 rounded-[22px] border border-violet-400/20 bg-violet-500/5"></div>
-              <div class="absolute bottom-16 left-12 h-16 w-16 rounded-full border border-blue-400/20 bg-blue-500/5"></div>
-              <div class="absolute bottom-16 right-16 h-28 w-28 rounded-full border border-white/5 bg-white/0"></div>
+              <div
+                class='absolute inset-x-6 top-6 h-24 rounded-[22px] border border-white/5 bg-white/0 backdrop-blur-[2px]'>
+              </div>
+              <div
+                class='absolute inset-x-10 bottom-8 h-44 rounded-[26px] border border-white/5 bg-slate-900/0 shadow-none backdrop-blur-[2px]'>
+              </div>
+              <div
+                class='absolute right-10 top-16 h-20 w-20 rounded-[22px] border border-violet-400/20 bg-violet-500/5'>
+              </div>
+              <div class='absolute bottom-16 left-12 h-16 w-16 rounded-full border border-blue-400/20 bg-blue-500/5'>
+              </div>
+              <div class='absolute bottom-16 right-16 h-28 w-28 rounded-full border border-white/5 bg-white/0'></div>
             </div>
           </div>
         </div>
       </div>
 
       <div
-        class="intersect-once intercept-no-queue intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
-      >
+        class='intersect-once intercept-no-queue intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade'>
         {
           image && (
-            <div class="relative m-auto max-w-5xl">
+            <div class='relative m-auto max-w-5xl'>
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
               ) : (
                 <Image
-                  class="mx-auto rounded-md w-full"
+                  class='mx-auto rounded-md w-full'
                   widths={[400, 768, 1024, 2040]}
-                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-                  loading="eager"
+                  sizes='(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px'
+                  loading='eager'
                   width={1024}
                   height={576}
                   {...image}
