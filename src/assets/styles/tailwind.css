@@ -36,6 +36,45 @@
   .btn-tertiary {
     @apply btn border-none shadow-none text-muted hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
   }
+
+  .hero-cta {
+    @apply relative overflow-hidden rounded-full border border-white/15 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] transition-all duration-300 ease-out shadow-[0_12px_30px_rgba(15,23,42,0.24)] sm:px-7;
+  }
+
+  .hero-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-120%);
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.26) 45%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.26) 55%, transparent 100%);
+    animation: hero-cta-slide 3s ease-in-out infinite;
+  }
+
+  .hero-cta--primary {
+    @apply border-violet-400/40 bg-violet-500/10 text-violet-100 hover:-translate-y-0.5 hover:border-violet-300/70 hover:bg-violet-500/15;
+  }
+
+  .hero-cta--highlight {
+    @apply border-cyan-300/40 bg-gradient-to-r from-cyan-400 via-sky-500 to-violet-500 text-white hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(14,165,233,0.5)];
+    box-shadow: 0 18px 40px rgba(59, 130, 246, 0.38);
+  }
+
+  .hero-cta--highlight::before {
+    animation-delay: 0.25s;
+  }
+}
+
+@keyframes hero-cta-slide {
+  0% {
+    transform: translateX(-130%);
+  }
+  25%,
+  75% {
+    transform: translateX(130%);
+  }
+  100% {
+    transform: translateX(130%);
+  }
 }
 
 #header.scroll > div:first-child {

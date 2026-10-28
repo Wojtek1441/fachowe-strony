@@ -2,8 +2,18 @@
 import { SITE } from 'astrowind:config';
 ---
 
-<span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
+<svg
+  xmlns='http://www.w3.org/2000/svg'
+  viewBox='0 0 64 64'
+  class='block h-8 w-8 shrink-0 md:h-9 md:w-9'
+  aria-label='Logo Fachowe Strony'
 >
+  <g fill='none' fill-rule='evenodd'>
+    <path d='M32 10 48 20 32 30 16 20z' fill='#fff' opacity='.96'></path>
+    <path d='M16 26 32 36 48 26' stroke='#fff' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round' opacity='.8'></path>
+    <path d='M16 34 32 44 48 34' stroke='#fff' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round' opacity='.6'></path>
+  </g>
+</svg>
+<span class='self-center ml-2 rtl:ml-0 rtl:mr-2 text-lg font-semibold tracking-[-0.04em] text-gray-900 whitespace-nowrap dark:text-white md:text-base'>
   {SITE?.name}
 </span>
