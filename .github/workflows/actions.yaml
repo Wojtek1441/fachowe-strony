@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: Build and deploy website
 
 on:
   pull_request:
@@ -7,23 +7,23 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   build:
     name: Build site
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18, 20, 22]
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js ${{ matrix.node-version }}
+      - name: Setup Node.js 22
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 22
           cache: npm
 
       - name: Install dependencies
@@ -35,13 +35,12 @@ jobs:
       - name: Verify dist output
         run: ls -la dist
 
-      - name: Push files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
         with:
-          local-dir: ./dist/
-          server:  	ftp.cluster100.hosting.ovh.net
-          username: ${{ secrets.ftp_user }}
-          password: ${{ secrets.ftp_passwd }}
+          name: production-site
+          path: dist/
+          if-no-files-found: error
 
   check:
     name: Run checks (Astro, ESLint, Prettier)
@@ -60,5 +59,26 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run lint/type/style checks
-        run: npm run check
+      - name: Run Astro and ESLint checks
+        run: npm run check:astro && npm run check:eslint
+
+  deploy:
+    name: Deploy to OVH
+    needs: [build, check]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: production-site
+          path: dist/
+
+      - name: Upload site over FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          local-dir: ./dist/
+          server: ftp.cluster100.hosting.ovh.net
+          username: ${{ secrets.ftp_user }}
+          password: ${{ secrets.ftp_passwd }}

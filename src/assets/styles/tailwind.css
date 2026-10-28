@@ -62,6 +62,193 @@
   .hero-cta--highlight::before {
     animation-delay: 0.25s;
   }
+
+  .hero-visual {
+    @apply isolate;
+    animation: hero-scene-float 10s ease-in-out infinite alternate;
+  }
+
+  .hero-visual__figure {
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    width: min(82%, 330px);
+    transform: translateX(-50%);
+    filter: drop-shadow(0 30px 50px rgba(167, 139, 250, 0.28));
+    animation: hero-figure-bob 8s ease-in-out infinite;
+  }
+
+  .hero-visual__badge {
+    position: absolute;
+    top: 48px;
+    right: 40px;
+    z-index: 10;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(10, 14, 30, 0.55);
+    color: #f8fafc;
+    letter-spacing: 0.12em;
+    font-size: 0.62rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.7rem 0.9rem;
+    border-radius: 999px;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
+    backdrop-filter: blur(12px);
+    animation: badge-float 8s ease-in-out infinite alternate;
+  }
+
+  .hero-visual__orb {
+    @apply absolute rounded-full blur-3xl;
+    opacity: 0.8;
+    filter: blur(72px);
+    animation: orb-drift 12s ease-in-out infinite alternate;
+  }
+
+  .hero-visual__orb--violet {
+    top: 18px;
+    right: 18px;
+    width: 180px;
+    height: 180px;
+    background: rgba(167, 139, 250, 0.28);
+  }
+
+  .hero-visual__orb--blue {
+    left: 18px;
+    bottom: 30px;
+    width: 190px;
+    height: 190px;
+    background: rgba(96, 165, 250, 0.24);
+    animation-delay: 1.5s;
+  }
+
+  .hero-visual__panel {
+    @apply absolute rounded-[26px] border border-white/10 bg-white/5 backdrop-blur-[2px];
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.22);
+    will-change: transform;
+  }
+
+  .hero-visual__panel--top {
+    top: 26px;
+    left: 44px;
+    right: 74px;
+    height: 94px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.11), rgba(15,23,42,0.05));
+    animation: panel-float-top 8s ease-in-out infinite;
+  }
+
+  .hero-visual__panel--main {
+    right: 36px;
+    left: 72px;
+    bottom: 36px;
+    height: 230px;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.4));
+    animation: panel-float-main 9s ease-in-out infinite;
+  }
+
+  .hero-visual__panel--side {
+    left: 26px;
+    top: 140px;
+    width: 150px;
+    height: 150px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.22), rgba(96, 165, 250, 0.08));
+    animation: panel-float-side 10s ease-in-out infinite;
+  }
+
+  .hero-visual__panel--tiny {
+    right: 80px;
+    top: 108px;
+    width: 102px;
+    height: 102px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.18), rgba(96, 165, 250, 0.08));
+    animation: panel-float-tiny 7s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes hero-scene-float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-0.5deg);
+  }
+  100% {
+    transform: translateY(8px) rotate(0.5deg);
+  }
+}
+
+@keyframes orb-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate3d(-14px, 10px, 0) scale(1.08);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate3d(16px, -12px, 0) scale(0.96);
+    opacity: 0.8;
+  }
+}
+
+@keyframes panel-float-top {
+  0%,
+  100% {
+    transform: translate(-6px, 0px) rotate(-2deg);
+  }
+  50% {
+    transform: translate(10px, 12px) rotate(2deg);
+  }
+}
+
+@keyframes panel-float-main {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(-1deg);
+  }
+}
+
+@keyframes panel-float-side {
+  0%,
+  100% {
+    transform: translate(-10px, 0px) rotate(-8deg);
+  }
+  50% {
+    transform: translate(12px, -14px) rotate(4deg);
+  }
+}
+
+@keyframes panel-float-tiny {
+  0% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translate(-14px, 16px) rotate(7deg) scale(1.05);
+  }
+}
+
+@keyframes hero-figure-bob {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0px) rotate(-1deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes badge-float {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
 }
 
 @keyframes hero-cta-slide {
