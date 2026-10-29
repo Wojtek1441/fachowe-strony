@@ -34,7 +34,7 @@ const slides = [
   },
 ];
 
-const repeatedSlides = [...slides, ...slides, ...slides];
+const repeatedSlides = [...slides, ...slides];
 ---
 
 <section class='info-slider not-prose' aria-label='Sekcja usług i rozwiązań marketingowych'>
@@ -43,7 +43,7 @@ const repeatedSlides = [...slides, ...slides, ...slides];
       <div class='info-slider__track'>
         {
           repeatedSlides.map((slide, index) => (
-            <article class='info-slider__slide' key={`${slide.eyebrow}-${index}`}>
+            <article class='info-slider__slide' data-key={`${slide.eyebrow}-${index}`}>
               <div class='info-slider__content'>
                 <p class='info-slider__eyebrow'>{slide.eyebrow}</p>
                 <h3>{slide.title}</h3>

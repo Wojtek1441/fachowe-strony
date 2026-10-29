@@ -103,9 +103,9 @@
 
   .info-slider__viewport {
     --slider-gap: 1rem;
-    --slider-card-width: calc((100vw - 8rem) / 3);
+    --slider-card-width: min(33.333vw, 360px);
     overflow: hidden;
-    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 9%, black 91%, transparent);
   }
 
   .info-slider__track {
@@ -116,9 +116,9 @@
   }
 
   .info-slider__slide {
-    @apply flex h-full flex-col justify-between rounded-3xl border border-slate-700/60 bg-slate-950/70 p-5 shadow-[0_30px_80px_rgba(15,23,42,0.34)] backdrop-blur-md;
-    flex: 0 0 min(33.333vw, 360px);
-    width: min(33.333vw, 360px);
+    @apply flex h-full flex-col justify-between rounded-3xl border border-slate-200/80 bg-white/90 p-5 text-slate-800 shadow-[0_24px_60px_rgba(15,23,42,0.1)] backdrop-blur-md dark:border-slate-700/60 dark:bg-slate-950/70 dark:text-slate-100;
+    flex: 0 0 var(--slider-card-width);
+    width: var(--slider-card-width);
     min-height: 260px;
   }
 
@@ -313,25 +313,11 @@
 }
 
 @keyframes info-slider-scroll {
-  0%,
-  15% {
+  0% {
     transform: translateX(0);
   }
-  20%,
-  35% {
-    transform: translateX(calc(-1 * (min(33.333vw, 360px) + 1rem)));
-  }
-  40%,
-  55% {
-    transform: translateX(calc(-2 * (min(33.333vw, 360px) + 1rem)));
-  }
-  60%,
-  75% {
-    transform: translateX(calc(-3 * (min(33.333vw, 360px) + 1rem)));
-  }
-  80%,
   100% {
-    transform: translateX(calc(-4 * (min(33.333vw, 360px) + 1rem)));
+    transform: translateX(calc(-50% - 0.5rem));
   }
 }
 
