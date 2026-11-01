@@ -3,33 +3,21 @@ const slides = [
   {
     eyebrow: 'Strony internetowe Kraków',
     title: 'Nowoczesne strony firmowe, które zwiększają sprzedaż',
-    description:
-      'Tworzymy witryny dopasowane do lokalnego rynku, które budują zaufanie, poprawiają konwersję i pomagają firmom w Krakowie zdobywać nowych klientów.',
-    points: ['SEO', 'UX/UI', 'Responsywność', 'Współpraca pod klucz'],
     metric: 'Od 1499 zł',
   },
   {
     eyebrow: 'Sklepy internetowe Kraków',
     title: 'E-commerce pod klucz do skutecznej sprzedaży online',
-    description:
-      'Sklepy internetowe Kraków od Fachowe Strony łączą estetykę, szybkie ładowanie i wygodny proces zakupowy, dzięki czemu Twoi klienci kupują szybciej i częściej.',
-    points: ['Shopify / WooCommerce', 'Koszyk', 'Płatności', 'Optymalizacja'],
     metric: 'Od 2999 zł',
   },
   {
     eyebrow: 'Pozycjonowanie i marketing',
     title: 'Strony internetowe i sklepy, które są widoczne w Google',
-    description:
-      'Dla firm działających w Krakowie projektujemy witryny z myślą o SEO, konwersji i zasięgu, dzięki czemu lepiej wypadają w wynikach wyszukiwania i przyciągają klientów.',
-    points: ['Google Business', 'SEO on-page', 'Content strategy', 'Wizerunek marki'],
     metric: 'Lokalne SEO',
   },
   {
     eyebrow: 'Dla firm i startupów',
     title: 'Rozwiązania webowe, które wspierają rozwój biznesu',
-    description:
-      'Niezależnie od tego, czy potrzebujesz strony internetowej w Krakowie, landing page czy sklepu internetowego, projektujemy rozwiązania, które wspierają sprzedaż i budują przewagę konkurencyjną.',
-    points: ['Landing page', 'Aplikacje web', 'Obsługa i rozwój', 'Wsparcie'],
     metric: 'Szybki start',
   },
 ];
@@ -45,14 +33,15 @@ const repeatedSlides = [...slides, ...slides];
           repeatedSlides.map((slide, index) => (
             <article class='info-slider__slide' data-key={`${slide.eyebrow}-${index}`}>
               <div class='info-slider__content'>
+                <div class='info-slider__icon' aria-hidden='true'>
+                  <svg viewBox='0 0 24 24' fill='none' focusable='false'>
+                    <path d='M4 5.5A1.5 1.5 0 0 1 5.5 4h13A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-13Z' stroke='currentColor' stroke-width='1.7' />
+                    <path d='M4.5 8h15M8 5.8h.01M10.5 5.8h.01' stroke='currentColor' stroke-width='1.7' stroke-linecap='round' />
+                    <path d='m9 15 2-2 2 2 2-3' stroke='currentColor' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round' />
+                  </svg>
+                </div>
                 <p class='info-slider__eyebrow'>{slide.eyebrow}</p>
                 <h3>{slide.title}</h3>
-                <p class='info-slider__description'>{slide.description}</p>
-                <ul class='info-slider__points'>
-                  {slide.points.map((point) => (
-                    <li>{point}</li>
-                  ))}
-                </ul>
               </div>
               <div class='info-slider__meta'>
                 <span>{slide.metric}</span>

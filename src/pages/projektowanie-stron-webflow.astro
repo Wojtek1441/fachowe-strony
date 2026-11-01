@@ -1,0 +1,175 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Projektowanie stron Webflow Polska | fachowestrony.pl',
+  description:
+    'Projektujemy unikalne strony Webflow dla firm w Polsce. Bez gotowych szablonów, z naciskiem na szybkość, SEO i konwersję. Zamów darmową wycenę.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline='Agencja Webflow · projekty dla firm w całej Polsce'
+    actions={[
+      { variant: 'primary', text: 'Darmowa wycena', href: '/kontakt' },
+      { text: 'Zobacz, jak pracujemy', href: '#proces' },
+    ]}
+  >
+    <Fragment slot='title'>Projektowanie stron Webflow dla Twojej firmy</Fragment>
+    <Fragment slot='subtitle'>
+      Projektujemy i wdrażamy nowoczesne strony Webflow z unikalnym designem, wygodną edycją treści i
+      solidnymi podstawami SEO. Bez przypadkowych szablonów i zbędnej złożoności.
+    </Fragment>
+  </Hero>
+
+  <Features
+    tagline='Webflow dopasowany do celów firmy'
+    title='Strona, która pracuje na rozwój Twojego biznesu'
+    subtitle='Łączymy przemyślany projekt, sprawne wdrożenie i łatwą obsługę, aby Twoja witryna wspierała sprzedaż oraz budowała zaufanie do marki.'
+    columns={2}
+    items={[
+      {
+        title: 'Unikalny design bez gotowego szablonu',
+        description:
+          'Projektujemy układ i wygląd strony wokół Twojej oferty, klientów i identyfikacji marki. Każda sekcja ma jasno określony cel.',
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Samodzielna edycja treści',
+        description:
+          'Webflow CMS pozwala aktualizować przygotowane treści, wpisy i materiały bez angażowania programisty przy każdej zmianie.',
+        icon: 'tabler:edit',
+      },
+      {
+        title: 'Szybkie i responsywne wdrożenie',
+        description:
+          'Dbamy o lekkie zasoby, poprawne widoki mobilne i uporządkowaną strukturę. Wynik szybkości zależy także od treści, urządzenia i zewnętrznych skryptów.',
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'Podstawy SEO i analityki',
+        description:
+          'Przygotowujemy strukturę nagłówków, metadane, adresy URL i techniczne elementy potrzebne do dalszej pracy nad widocznością w Google.',
+        icon: 'tabler:search',
+      },
+    ]}
+  />
+
+  <section class='not-prose bg-slate-50 py-16 dark:bg-slate-900/60 md:py-24'>
+    <div class='mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:items-center'>
+      <div>
+        <p class='mb-3 text-sm font-bold uppercase tracking-[0.16em] text-violet-700 dark:text-violet-300'>
+          Alternatywa dla WordPressa
+        </p>
+        <h2 class='mb-5 text-3xl font-bold leading-tight text-slate-900 dark:text-white md:text-4xl'>
+          Mniej obsługi technicznej, więcej kontroli nad stroną
+        </h2>
+        <p class='text-lg leading-relaxed text-slate-700 dark:text-slate-300'>
+          WordPress i Webflow odpowiadają na różne potrzeby. Webflow może być dobrym wyborem, jeśli chcesz edytować
+          stronę wizualnie i ograniczyć zależność od wielu dodatkowych wtyczek. Dobieramy technologię do funkcji,
+          integracji i planów rozwoju Twojej firmy, a koszty platformy omawiamy przed rozpoczęciem projektu.
+        </p>
+      </div>
+      <ul class='grid gap-4 sm:grid-cols-2'>
+        <li class='rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-950'>
+          <h3 class='mb-2 font-semibold text-slate-900 dark:text-white'>Prostsze aktualizacje</h3>
+          <p class='text-sm leading-6 text-slate-600 dark:text-slate-300'>Edytuj teksty i materiały w przygotowanym panelu CMS.</p>
+        </li>
+        <li class='rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-950'>
+          <h3 class='mb-2 font-semibold text-slate-900 dark:text-white'>Projekt zgodny z marką</h3>
+          <p class='text-sm leading-6 text-slate-600 dark:text-slate-300'>Otrzymujesz indywidualny interfejs zamiast generycznego motywu.</p>
+        </li>
+        <li class='rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-950'>
+          <h3 class='mb-2 font-semibold text-slate-900 dark:text-white'>Jasne koszty utrzymania</h3>
+          <p class='text-sm leading-6 text-slate-600 dark:text-slate-300'>Uwzględniamy plan Webflow, domenę i potrzebne integracje.</p>
+        </li>
+        <li class='rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-950'>
+          <h3 class='mb-2 font-semibold text-slate-900 dark:text-white'>Możliwość rozwoju</h3>
+          <p class='text-sm leading-6 text-slate-600 dark:text-slate-300'>Rozbudowuj ofertę i treści wraz z rozwojem biznesu.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <Steps2
+    id='proces'
+    tagline='Od briefu do publikacji'
+    title='Jak projektujemy strony Webflow?'
+    subtitle='Pracujemy etapami, dzięki czemu wiesz, co powstaje i kiedy podejmujesz decyzje.'
+    items={[
+      {
+        title: 'Rozpoznanie potrzeb',
+        description:
+          'Ustalamy cele strony, grupę odbiorców, zakres treści, wymagane integracje i sposób mierzenia efektów.',
+      },
+      {
+        title: 'Struktura i projekt',
+        description:
+          'Planujemy nawigację oraz ścieżki użytkownika, a następnie tworzymy indywidualny projekt zgodny z Twoją marką.',
+      },
+      {
+        title: 'Wdrożenie w Webflow',
+        description:
+          'Budujemy responsywne widoki, konfigurujemy CMS, formularze i uzgodnione integracje.',
+      },
+      {
+        title: 'Testy i przekazanie',
+        description:
+          'Sprawdzamy działanie na różnych urządzeniach, pomagamy opublikować stronę i pokazujemy, jak edytować treści.',
+      },
+    ]}
+  />
+
+  <FAQs
+    tagline='Ważne informacje przed wdrożeniem'
+    title='FAQ: strony Webflow'
+    subtitle='Odpowiedzi na pytania o edycję, SEO, koszty i integracje.'
+    columns={1}
+    items={[
+      {
+        title: 'Czy Webflow jest lepszy od WordPressa?',
+        description:
+          'To zależy od projektu. Webflow sprawdzi się, jeśli ważne są wizualne projektowanie i edycja oraz mniejsza liczba dodatkowych wtyczek. WordPress może lepiej pasować do niektórych rozbudowanych ekosystemów i funkcji. Przed wyceną porównamy wymagania i koszty obu rozwiązań.',
+      },
+      {
+        title: 'Czy samodzielnie zmienię teksty i zdjęcia?',
+        description:
+          'Tak. Przygotowujemy edytowalne obszary i kolekcje CMS odpowiednie do projektu. Po wdrożeniu pokazujemy, jak aktualizować treści bez ingerowania w kod.',
+      },
+      {
+        title: 'Czy strona Webflow będzie pozycjonować się w Google?',
+        description:
+          'Webflow udostępnia ustawienia ważne dla SEO, takie jak tytuły, opisy, adresy URL i strukturę treści. Pozycje zależą również od jakości contentu, konkurencji, linków i dalszych działań SEO, więc sama platforma ich nie gwarantuje.',
+      },
+      {
+        title: 'Czy Webflow obsługuje polskie płatności?',
+        description:
+          'Dostępność płatności zależy od wybranej integracji i modelu sprzedaży. Przed realizacją weryfikujemy wymagane metody, na przykład BLIK, oraz sprawdzamy, czy pasują do planu i architektury projektu. W przypadku rozbudowanego sklepu możemy zaproponować inne rozwiązanie.',
+      },
+      {
+        title: 'Ile kosztuje utrzymanie strony Webflow?',
+        description:
+          'Poza wykonaniem projektu trzeba uwzględnić plan Webflow, domenę i ewentualne płatne integracje. Koszt planu zależy od potrzeb strony i CMS. Przed rozpoczęciem prac przedstawiamy przewidywane koszty utrzymania.',
+      },
+      {
+        title: 'Czy można przenieść istniejącą stronę do Webflow?',
+        description:
+          'Tak, zakres migracji ustalamy po analizie obecnej strony. Sprawdzamy treści, adresy URL, przekierowania, formularze i integracje, aby zaplanować przeniesienie bez niepotrzebnej utraty widoczności.',
+      },
+    ]}
+  />
+
+  <CallToAction
+    tagline='Bezpłatna wycena · bez zobowiązań'
+    title='Porozmawiajmy o Twojej stronie Webflow'
+    subtitle='Opowiedz nam o firmie, klientach i celach strony. Przygotujemy zakres prac, harmonogram oraz przewidywane koszty projektu i utrzymania.'
+    actions={[{ variant: 'primary', text: 'Zamów darmową wycenę', href: '/kontakt' }]}
+  />
+</Layout>

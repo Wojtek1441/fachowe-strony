@@ -27,6 +27,10 @@ export const headerData = {
           href: getPermalink('/strony-internetowe/strony-internetowe-z-cms'),
         },
         {
+          text: 'Projektowanie stron Webflow',
+          href: getPermalink('/projektowanie-stron-webflow'),
+        },
+        {
           text: 'Administracja strony',
           href: getPermalink('/strony-internetowe/administracja-stron'),
         },

@@ -26,7 +26,35 @@ const {
       {bg ? <Fragment set:html={bg} /> : null}
     </slot>
   </div>
-  <div class='relative max-w-7xl mx-auto px-4 sm:px-6'>
+  <div class='hero-watermark' aria-hidden='true'>
+    <svg viewBox='14 8 36 38' preserveAspectRatio='xMidYMid meet' focusable='false'>
+      <defs>
+        <linearGradient id='hero-watermark-gradient' x1='0%' y1='0%' x2='100%' y2='100%'>
+          <stop offset='0%' stop-color='#8b5cf6'></stop>
+          <stop offset='55%' stop-color='#6366f1'></stop>
+          <stop offset='100%' stop-color='#06b6d4'></stop>
+        </linearGradient>
+      </defs>
+      <g fill='none' fill-rule='evenodd'>
+        <path d='M32 10 48 20 32 30 16 20z' fill='url(#hero-watermark-gradient)' opacity='.96'></path>
+        <path
+          d='M16 26 32 36 48 26'
+          stroke='url(#hero-watermark-gradient)'
+          stroke-width='4.5'
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          opacity='.8'></path>
+        <path
+          d='M16 34 32 44 48 34'
+          stroke='url(#hero-watermark-gradient)'
+          stroke-width='4.5'
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          opacity='.6'></path>
+      </g>
+    </svg>
+  </div>
+  <div class='relative z-10 max-w-7xl mx-auto px-4 sm:px-6'>
     <div class='pt-0 md:pt-[76px] pointer-events-none'></div>
     <div class='pt-8 md:pt-12'>
       <div class='overflow-hidden'>
