@@ -46,7 +46,14 @@
     position: absolute;
     inset: 0;
     transform: translateX(-120%);
-    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.26) 45%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.26) 55%, transparent 100%);
+    background: linear-gradient(
+      120deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.26) 45%,
+      rgba(255, 255, 255, 0.7) 50%,
+      rgba(255, 255, 255, 0.26) 55%,
+      transparent 100%
+    );
     animation: hero-cta-slide 3s ease-in-out infinite;
   }
 
@@ -228,7 +235,7 @@
     left: 44px;
     right: 74px;
     height: 94px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.11), rgba(15,23,42,0.05));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.11), rgba(15, 23, 42, 0.05));
     animation: panel-float-top 8s ease-in-out infinite;
   }
 
@@ -257,7 +264,7 @@
     width: 102px;
     height: 102px;
     border-radius: 24px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.18), rgba(96, 165, 250, 0.08));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(96, 165, 250, 0.08));
     animation: panel-float-tiny 7s ease-in-out infinite alternate;
   }
 }
