@@ -1,0 +1,1171 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Image from '~/components/common/Image.astro';
+import { Icon } from 'astro-icon/components';
+import Logo from '~/components/Logo.astro';
+import ToggleTheme from '~/components/common/ToggleTheme.astro';
+import { getAsset, getHomePermalink } from '~/utils/permalinks';
+import campaignIllustration from '~/assets/images/teamwork-project-isometric-composition-with-four-female-characters-developing-user-interface-website-vector-illustration_1284-74778.avif';
+
+const metadata = {
+  title: 'Darmowa strona internetowa dla Twojej firmy',
+  description:
+    'Zgłoś projekt do bezpłatnego pakietu strony internetowej. Wybierz rodzaj projektu i opowiedz nam o swojej firmie.',
+};
+
+const benefits = [
+  {
+    number: '01',
+    title: 'Dopasowany projekt',
+    description: 'Strona zaplanowana wokół Twojej oferty i tego, czego szukają klienci.',
+  },
+  {
+    number: '02',
+    title: 'Gotowość na telefon',
+    description: 'Czytelny układ i wygodna obsługa na ekranach każdej wielkości.',
+  },
+  {
+    number: '03',
+    title: 'Jasne zasady',
+    description: 'Najpierw poznasz zakres pakietu i ewentualne koszty dodatkowe.',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot='header'>
+    <header class='free-header'>
+      <div class='free-header__inner'>
+        <a class='free-header__logo' href={getHomePermalink()} aria-label='Fachowe Strony - strona główna'>
+          <Logo />
+        </a>
+        <div class='free-header__actions'>
+          <a class='free-header__phone' href='tel:+48727147668'>727 147 668</a>
+          <a class='free-header__quote' href='#formularz'>Darmowa wycena</a>
+          <ToggleTheme
+            label='Przełącz jasny lub ciemny motyw'
+            class='free-header__icon'
+            iconClass='h-5 w-5'
+            iconName='tabler:sun'
+          />
+          <a class='free-header__icon' href={getAsset('/rss.xml')} aria-label='Kanał RSS' title='Kanał RSS'>
+            <Icon name='tabler:rss' class='h-5 w-5' />
+          </a>
+        </div>
+      </div>
+    </header>
+  </Fragment>
+  <div class='free-landing'>
+    <main>
+      <section class='free-hero' aria-labelledby='hero-title'>
+        <div class='free-hero__copy'>
+          <p class='free-eyebrow'><span></span> Nabór zgłoszeń</p>
+          <h1 id='hero-title'>Darmowa strona <em>dla Twojej Firmy.</em></h1>
+          <p class='free-hero__lead'>
+            Zgłoś się do bezpłatnego pakietu i opowiedz nam, czego potrzebuje Twoja firma. Wspólnie sprawdzimy, jak
+            możemy pomóc.
+          </p>
+          <p class='free-hero__note'>Bezpłatne zgłoszenie. Bez zobowiązań.</p>
+        </div>
+
+        <form class='free-form' id='formularz' action='https://www.form-to-email.com/api/s/JZyA1QySaCrr' method='POST'>
+          <input type='hidden' name='_subject' value='Zgłoszenie do bezpłatnego pakietu strony' />
+
+          <div class='free-form__heading'>
+            <div>
+              <span class='free-form__eyebrow'>FORMULARZ ZGŁOSZENIOWY</span>
+              <h2>Opowiedz nam o swoim projekcie</h2>
+            </div>
+            <span class='free-required'>* pola wymagane</span>
+          </div>
+
+          <div class='free-form__grid'>
+            <div class='free-field'>
+              <label for='applicant-name'>Imię i nazwisko <span>*</span></label>
+              <input
+                id='applicant-name'
+                name='name'
+                type='text'
+                autocomplete='name'
+                placeholder='Jan Kowalski'
+                required
+              />
+            </div>
+            <div class='free-field'>
+              <label for='applicant-email'>Adres e-mail <span>*</span></label>
+              <input
+                id='applicant-email'
+                name='email'
+                type='email'
+                autocomplete='email'
+                placeholder='jan@firma.pl'
+                required
+              />
+            </div>
+            <div class='free-field'>
+              <label for='business-name'>Nazwa firmy</label>
+              <input
+                id='business-name'
+                name='company'
+                type='text'
+                autocomplete='organization'
+                placeholder='Twoja firma'
+              />
+            </div>
+            <div class='free-field'>
+              <label for='applicant-phone'>Telefon</label>
+              <input id='applicant-phone' name='phone' type='tel' autocomplete='tel' placeholder='+48 000 000 000' />
+            </div>
+            <div class='free-field free-field--full'>
+              <label for='product-type'>Jaki projekt chcesz zgłosić? <span>*</span></label>
+              <select id='product-type' name='product' required>
+                <option value='' disabled selected>Wybierz rodzaj projektu</option>
+                <option value='Strona firmowa'>Strona firmowa</option>
+                <option value='Strona docelowa kampanii'>Strona docelowa kampanii</option>
+                <option value='Sklep internetowy'>Sklep internetowy</option>
+                <option value='Odświeżenie istniejącej strony'>Odświeżenie istniejącej strony</option>
+                <option value='Inny projekt'>Inny projekt</option>
+              </select>
+            </div>
+            <div class='free-field free-field--full'>
+              <label for='project-details'>Napisz kilka słów o swoim projekcie <span>*</span></label>
+              <textarea
+                id='project-details'
+                name='message'
+                rows='3'
+                placeholder='Czym zajmuje się Twoja firma i co strona powinna pomóc Ci osiągnąć?'
+                required></textarea>
+            </div>
+          </div>
+
+          <label class='free-consent' for='privacy-consent'>
+            <input
+              id='privacy-consent'
+              name='privacy-notice-confirmation'
+              type='checkbox'
+              value='Potwierdzam zapoznanie się z informacją o przetwarzaniu danych'
+              required
+            />
+            <span>
+              Potwierdzam zapoznanie się z
+              <a href='/privacy'>informacją o przetwarzaniu danych osobowych</a>. <strong>*</strong>
+            </span>
+          </label>
+
+          <button class='free-button free-button--submit' type='submit'
+            >Wyślij zgłoszenie <span aria-hidden='true'>↗</span></button
+          >
+          <p class='free-form__footnote'>
+            Domenę, hosting i ewentualne koszty dodatkowe ustalimy przed rozpoczęciem prac.
+          </p>
+        </form>
+      </section>
+
+      <section class='free-benefits' aria-label='Co zyskujesz'>
+        {
+          benefits.map((benefit) => (
+            <article class='free-benefit'>
+              <span class='free-benefit__number'>{benefit.number}</span>
+              <div>
+                <h2>{benefit.title}</h2>
+                <p>{benefit.description}</p>
+              </div>
+            </article>
+          ))
+        }
+      </section>
+
+      <section class='free-why' aria-labelledby='why-title'>
+        <div class='free-why__intro'>
+          <p class='free-eyebrow'><span></span> Dlaczego warto wybrać nas?</p>
+          <h2 id='why-title'>Darmowa, ale <em>nie przypadkowa.</em></h2>
+          <p>
+            Kreator pozwala zbudować stronę samodzielnie. My pomagamy przejść od pomysłu do uporządkowanej witryny, która
+            jasno pokazuje Twoją ofertę.
+          </p>
+        </div>
+
+        <div class='free-why__points'>
+          <article class='free-why__point'>
+            <span>01 / DOPASOWANIE</span>
+            <h3>Struktura pod Twoją firmę</h3>
+            <p>Układ strony planujemy wokół Twoich usług, klientów i celu, który ma realizować witryna.</p>
+          </article>
+          <article class='free-why__point'>
+            <span>02 / JASNE ZASADY</span>
+            <h3>Wiesz, co obejmuje pakiet</h3>
+            <p>Przed rozpoczęciem ustalamy zakres oraz ewentualne koszty domeny, hostingu i dodatkowych funkcji.</p>
+          </article>
+          <article class='free-why__point'>
+            <span>03 / WSPÓŁPRACA</span>
+            <h3>Masz z kim omówić pomysł</h3>
+            <p>Możesz porozmawiać z naszym zespołem zamiast samodzielnie uczyć się obsługi kolejnego narzędzia.</p>
+          </article>
+        </div>
+
+        <div class='free-why__bonus'>
+          <span class='free-why__bonus-mark' aria-hidden='true'>+</span>
+          <div>
+            <p class='free-why__bonus-label'>PAKIET STARTOWY DLA FIRM PRZYJĘTYCH DO PROGRAMU</p>
+            <h3>Bezpłatna konsultacja i szkic mapy strony</h3>
+            <p>Ustalimy najważniejsze sekcje i kolejność treści, żeby od początku prowadziły klienta do kontaktu.</p>
+          </div>
+          <a href='#formularz'>Zgłoś projekt <span aria-hidden='true'>↗</span></a>
+        </div>
+      </section>
+
+      <section class='free-audience' aria-labelledby='audience-title'>
+        <div class='free-audience__content'>
+          <p class='free-eyebrow'><span></span> Dla kogo?</p>
+          <h2 id='audience-title'>Dobry początek dla <em>firm na różnych etapach.</em></h2>
+          <p class='free-audience__lead'>Bezpłatny pakiet kierujemy do małych i średnich firm, które chcą rozwijać swoją obecność w internecie.</p>
+          <div class='free-audience__cards'>
+            <article class='free-audience__card'>
+              <span>01 / MAŁE FIRMY</span>
+              <h3>Rozpocznij działalność w sieci</h3>
+              <p>Dla lokalnych usług, nowych marek i rozwijających się działalności, które potrzebują profesjonalnej wizytówki online.</p>
+            </article>
+            <article class='free-audience__card'>
+              <span>02 / ŚREDNIE FIRMY</span>
+              <h3>Uporządkuj ofertę i rozwijaj sprzedaż</h3>
+              <p>Dla zespołów, które chcą lepiej prezentować usługi, docierać do nowych klientów lub odświeżyć swoją stronę.</p>
+            </article>
+          </div>
+        </div>
+        <div class='free-audience__visual'>
+          <Image
+            src={campaignIllustration}
+            alt='Zespół wspólnie projektuje stronę internetową dla rozwijającej się firmy'
+            class='free-audience__image'
+            loading='lazy'
+          />
+          <p>Z dobrym pomysłem łatwiej zacząć.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+</Layout>
+
+<style>
+  .free-header {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    border-bottom: 1px solid #e3e7e1;
+    background: #fff;
+  }
+
+  .free-header__inner {
+    display: flex;
+    max-width: 80rem;
+    min-height: 78px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .free-header__logo {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .free-header__logo :global(svg) {
+    color: #176f50;
+    align-self: center;
+    transform: translateY(2px);
+  }
+
+  .free-header__logo :global(span) {
+    margin-left: 0.25rem;
+  }
+
+  .free-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+  }
+
+  .free-header__phone {
+    padding: 0.65rem 0.8rem;
+    color: #172620;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .free-header__phone:hover {
+    color: #176f50;
+  }
+
+  .free-header__quote {
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1rem;
+    border-radius: 4px;
+    background: #176f50;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 160ms ease;
+  }
+
+  .free-header__quote:hover {
+    background: #10563d;
+    color: #fff;
+  }
+
+  .free-header__icon {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: transparent;
+    color: #26352d;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 160ms ease, color 160ms ease;
+  }
+
+  .free-header__icon:hover {
+    background: #f0f3ed;
+    color: #176f50;
+  }
+
+  .free-header__phone:focus-visible,
+  .free-header__quote:focus-visible,
+  .free-header__icon:focus-visible {
+    outline: 2px solid #176f50;
+    outline-offset: 3px;
+  }
+
+  .free-landing {
+    --free-ink: #172620;
+    --free-muted: #58675f;
+    --free-paper: #fff;
+    --free-green: #176f50;
+    --free-lime: #d7ed62;
+    --free-line: #dfe5dc;
+    --free-card: #fff;
+    --free-input: #fff;
+    color: var(--free-ink);
+    background: var(--free-paper);
+  }
+
+  :global(.dark) .free-header {
+    border-color: #35443a;
+    background: #17221c;
+  }
+
+  :global(.dark) .free-header__phone,
+  :global(.dark) .free-header__icon {
+    color: #eef4ed;
+  }
+
+  :global(.dark) .free-header__logo :global(svg) {
+    color: #fff;
+  }
+
+  :global(.dark) .free-header__icon:hover {
+    background: #29382f;
+    color: #a7dbb8;
+  }
+
+  :global(.dark) .free-landing {
+    --free-ink: #eef4ed;
+    --free-muted: #b7c5ba;
+    --free-paper: #17221c;
+    --free-green: #8ed3aa;
+    --free-lime: #d7ed62;
+    --free-line: #35443a;
+    --free-card: #202d25;
+    --free-input: #17221c;
+  }
+
+  .free-landing main {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .free-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+    align-items: start;
+    gap: clamp(2rem, 6vw, 6.5rem);
+    min-height: 590px;
+    padding: 3rem 0 4.5rem;
+  }
+
+  .free-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin: 0 0 1.35rem;
+    color: var(--free-green);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+
+  .free-eyebrow span {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: var(--free-green);
+  }
+
+  .free-hero h1,
+  .free-apply__intro h2 {
+    max-width: 650px;
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 750;
+    line-height: 0.99;
+    letter-spacing: -0.045em;
+  }
+
+  .free-hero h1 em,
+  .free-apply__intro h2 em {
+    color: var(--free-green);
+    font-style: normal;
+  }
+
+  .free-hero__lead {
+    max-width: 520px;
+    margin: 1.5rem 0 1.8rem;
+    color: var(--free-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .free-button {
+    display: inline-flex;
+    min-height: 54px;
+    align-items: center;
+    justify-content: center;
+    gap: 1.8rem;
+    padding: 0.9rem 1.35rem;
+    border: 1px solid var(--free-green);
+    border-radius: 4px;
+    background: var(--free-green);
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+      background-color 160ms ease,
+      transform 160ms ease;
+  }
+
+  .free-button:hover {
+    transform: translateY(-2px);
+    background: #10563d;
+  }
+
+  .free-button span {
+    font-size: 1.2rem;
+  }
+
+  .free-hero__note {
+    margin: 0.95rem 0 0;
+    color: var(--free-muted);
+    font-size: 0.8rem;
+  }
+
+  .free-hero__visual {
+    position: relative;
+    display: flex;
+    min-height: 410px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #e8efdf;
+    background-image:
+      linear-gradient(rgba(23, 38, 32, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(23, 38, 32, 0.045) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .free-hero__image {
+    position: absolute;
+    right: 3%;
+    bottom: -3%;
+    width: 96%;
+    height: 88%;
+    object-fit: contain;
+    object-position: center bottom;
+  }
+
+  .free-visual-label {
+    position: absolute;
+    z-index: 1;
+    top: 1.3rem;
+    left: 1.35rem;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--free-ink);
+  }
+
+  .free-visual-label span {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+  }
+
+  .free-visual-label strong {
+    font-size: 1.1rem;
+    line-height: 1.15;
+  }
+
+  .free-visual-stamp {
+    position: absolute;
+    right: 1.2rem;
+    bottom: 1.2rem;
+    display: grid;
+    width: 78px;
+    aspect-ratio: 1;
+    align-content: center;
+    border: 1px solid var(--free-ink);
+    border-radius: 50%;
+    background: var(--free-lime);
+    color: var(--free-ink);
+    font-size: 0.68rem;
+    font-weight: 800;
+    line-height: 1.1;
+    text-align: center;
+    transform: rotate(9deg);
+  }
+
+  .free-benefits {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid var(--free-line);
+    border-bottom: 1px solid var(--free-line);
+  }
+
+  .free-benefit {
+    display: flex;
+    gap: 1rem;
+    padding: 1.8rem 1.5rem 1.8rem 0;
+  }
+
+  .free-benefit + .free-benefit {
+    padding-left: 1.5rem;
+    border-left: 1px solid var(--free-line);
+  }
+
+  .free-benefit__number {
+    color: var(--free-green);
+    font-size: 0.75rem;
+    font-weight: 800;
+  }
+
+  .free-benefit h2 {
+    margin: 0 0 0.45rem;
+    font-size: 1rem;
+    font-weight: 750;
+  }
+
+  .free-benefit p {
+    max-width: 270px;
+    margin: 0;
+    color: var(--free-muted);
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .free-why {
+    padding: 3rem 0 1rem;
+    border-top: 1px solid var(--free-line);
+  }
+
+  .free-why__intro {
+    max-width: 760px;
+    margin-bottom: 2rem;
+  }
+
+  .free-why__intro h2 {
+    margin: 0;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 750;
+    line-height: 1.04;
+  }
+
+  .free-why__intro h2 em {
+    color: var(--free-green);
+    font-style: normal;
+  }
+
+  .free-why__intro > p:last-child {
+    max-width: 680px;
+    margin: 0.9rem 0 0;
+    color: var(--free-muted);
+    line-height: 1.65;
+  }
+
+  .free-why__points {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.9rem;
+  }
+
+  .free-why__point {
+    min-height: 180px;
+    padding: 1.3rem;
+    border: 1px solid var(--free-line);
+    background: var(--free-card);
+  }
+
+  .free-why__point > span,
+  .free-why__bonus-label {
+    color: var(--free-green);
+    font-size: 0.67rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+  }
+
+  .free-why__point h3,
+  .free-why__bonus h3 {
+    margin: 0.75rem 0 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 750;
+    line-height: 1.3;
+  }
+
+  .free-why__point p,
+  .free-why__bonus > div > p:last-child {
+    margin: 0;
+    color: var(--free-muted);
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .free-why__bonus {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 1.3rem 1.4rem;
+    border-left: 4px solid var(--free-green);
+    background: var(--free-card);
+  }
+
+  .free-why__bonus-mark {
+    display: grid;
+    width: 42px;
+    aspect-ratio: 1;
+    place-items: center;
+    border: 1px solid var(--free-green);
+    border-radius: 50%;
+    color: var(--free-green);
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  .free-why__bonus-label {
+    margin: 0;
+  }
+
+  .free-why__bonus h3 {
+    margin: 0.3rem 0;
+  }
+
+  .free-why__bonus a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--free-green);
+    font-size: 0.88rem;
+    font-weight: 750;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .free-why__bonus a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .free-apply {
+    display: grid;
+    grid-template-columns: minmax(230px, 0.72fr) minmax(0, 1.28fr);
+    gap: clamp(2.5rem, 8vw, 8rem);
+    padding: 6rem 0 7rem;
+    scroll-margin-top: 2rem;
+  }
+
+  .free-apply__intro h2 {
+    font-size: clamp(2.4rem, 4vw, 3.8rem);
+  }
+
+  .free-apply__intro > p:not(.free-eyebrow) {
+    max-width: 360px;
+    margin: 1.3rem 0 0;
+    color: var(--free-muted);
+    line-height: 1.7;
+  }
+
+  .free-apply__aside {
+    display: flex;
+    gap: 0.9rem;
+    max-width: 360px;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--free-line);
+  }
+
+  .free-apply__aside span {
+    color: var(--free-green);
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+
+  .free-apply__aside p {
+    margin: 0;
+    color: var(--free-muted);
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  .free-form {
+    padding: clamp(1.25rem, 3vw, 2.4rem);
+    border: 1px solid var(--free-line);
+    background: var(--free-card);
+  }
+
+  .free-form__heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.8rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--free-line);
+    color: var(--free-ink);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+  }
+
+  .free-required {
+    color: var(--free-muted);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+
+  .free-form__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem 1rem;
+  }
+
+  .free-field {
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .free-field--full {
+    grid-column: 1 / -1;
+  }
+
+  .free-field label {
+    color: var(--free-ink);
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+
+  .free-field label span,
+  .free-consent strong {
+    color: var(--free-green);
+  }
+
+  .free-field input,
+  .free-field select,
+  .free-field textarea {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.75rem 0.85rem;
+    border: 1px solid #ccd5cb;
+    border-radius: 3px;
+    background: var(--free-input);
+    color: var(--free-ink);
+    font: inherit;
+    font-size: 0.88rem;
+  }
+
+  .free-field textarea {
+    min-height: 112px;
+    resize: vertical;
+  }
+
+  .free-field input::placeholder,
+  .free-field textarea::placeholder {
+    color: #849087;
+  }
+
+  .free-field input:focus,
+  .free-field select:focus,
+  .free-field textarea:focus,
+  .free-consent input:focus-visible {
+    outline: 2px solid var(--free-green);
+    outline-offset: 2px;
+  }
+
+  .free-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    margin: 1.25rem 0;
+    color: var(--free-muted);
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+
+  .free-consent input {
+    width: 17px;
+    height: 17px;
+    flex: 0 0 17px;
+    margin: 2px 0 0;
+    accent-color: var(--free-green);
+  }
+
+  .free-consent a {
+    color: var(--free-green);
+    font-weight: 700;
+    text-underline-offset: 2px;
+  }
+
+  .free-button--submit {
+    width: 100%;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 750;
+  }
+
+  .free-form__footnote {
+    margin: 0.8rem 0 0;
+    color: var(--free-muted);
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  .free-audience {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+    align-items: center;
+    gap: clamp(2rem, 5vw, 5rem);
+    padding: 3rem 0 6rem;
+  }
+
+  .free-audience__content h2 {
+    max-width: 660px;
+    margin: 0;
+    font-size: clamp(2.2rem, 4vw, 3.6rem);
+    font-weight: 750;
+    line-height: 1.05;
+  }
+
+  .free-audience__content h2 em {
+    color: var(--free-green);
+    font-style: normal;
+  }
+
+  .free-audience__lead {
+    max-width: 610px;
+    margin: 1rem 0 1.6rem;
+    color: var(--free-muted);
+    line-height: 1.65;
+  }
+
+  .free-audience__cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+  }
+
+  .free-audience__card {
+    min-height: 170px;
+    padding: 1.25rem;
+    border: 1px solid var(--free-line);
+    background: var(--free-card);
+  }
+
+  .free-audience__card > span {
+    color: var(--free-green);
+    font-size: 0.67rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+  }
+
+  .free-audience__card h3 {
+    margin: 0.75rem 0 0.5rem;
+    font-size: 1rem;
+    font-weight: 750;
+    line-height: 1.3;
+  }
+
+  .free-audience__card p {
+    margin: 0;
+    color: var(--free-muted);
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+
+  .free-audience__visual {
+    position: relative;
+    display: grid;
+    min-height: 360px;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+    background-color: #e8efdf;
+    background-image:
+      linear-gradient(rgba(23, 38, 32, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(23, 38, 32, 0.045) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .free-audience__image {
+    width: 100%;
+    height: 100%;
+    max-height: 330px;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .free-audience__visual p {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.8rem;
+    left: 1rem;
+    margin: 0;
+    color: #176f50;
+    font-size: 0.85rem;
+    font-weight: 750;
+    text-align: center;
+  }
+
+  :global(.dark) .free-audience__visual {
+    background-color: #29382f;
+    background-image:
+      linear-gradient(rgba(238, 244, 237, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(238, 244, 237, 0.04) 1px, transparent 1px);
+  }
+
+  @media (max-width: 850px) {
+    .free-header__inner {
+      padding-right: 1.4rem;
+      padding-left: 1.4rem;
+    }
+
+    .free-landing main {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .free-hero {
+      grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+      gap: 2rem;
+    }
+
+    .free-hero__visual {
+      min-height: 350px;
+    }
+
+    .free-apply {
+      grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .free-header__inner {
+      min-height: 68px;
+      gap: 0.4rem;
+      padding-right: 0.75rem;
+      padding-left: 0.75rem;
+    }
+
+    .free-header__actions {
+      gap: 0.15rem;
+    }
+
+    .free-header__phone {
+      padding: 0.5rem 0.25rem;
+      font-size: 0.77rem;
+    }
+
+    .free-header__quote {
+      min-height: 38px;
+      padding: 0.55rem 0.65rem;
+      font-size: 0.74rem;
+    }
+
+    .free-header__icon {
+      width: 36px;
+      height: 38px;
+    }
+
+    .free-header__logo :global(span) {
+      margin-left: 0.2rem;
+      font-size: 0.84rem;
+    }
+
+    .free-header__logo :global(svg) {
+      width: 30px;
+      height: 30px;
+    }
+
+    .free-landing main {
+      padding-right: 1.2rem;
+      padding-left: 1.2rem;
+    }
+
+    .free-hero {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      min-height: auto;
+      padding: 3.5rem 0 2.7rem;
+    }
+
+    .free-hero h1 {
+      font-size: 2.75rem;
+    }
+
+    .free-hero__visual {
+      min-height: 300px;
+    }
+
+    .free-hero__image {
+      width: 92%;
+      height: 83%;
+    }
+
+    .free-benefits {
+      grid-template-columns: 1fr;
+    }
+
+    .free-benefit,
+    .free-benefit + .free-benefit {
+      padding: 1.25rem 0;
+      border-left: 0;
+    }
+
+    .free-benefit + .free-benefit {
+      border-top: 1px solid var(--free-line);
+    }
+
+    .free-benefit p {
+      max-width: none;
+    }
+
+    .free-why {
+      padding-top: 2rem;
+    }
+
+    .free-why__points {
+      grid-template-columns: 1fr;
+    }
+
+    .free-why__point {
+      min-height: 0;
+    }
+
+    .free-why__bonus {
+      grid-template-columns: auto minmax(0, 1fr);
+      align-items: start;
+    }
+
+    .free-why__bonus a {
+      grid-column: 2;
+      justify-self: start;
+    }
+
+    .free-audience {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding-top: 2rem;
+      padding-bottom: 4rem;
+    }
+
+    .free-audience__visual {
+      min-height: 280px;
+    }
+
+    .free-audience__image {
+      max-height: 260px;
+    }
+
+    .free-apply {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 4rem 0;
+    }
+
+    .free-apply__intro h2 {
+      font-size: 2.8rem;
+    }
+
+    .free-form {
+      padding: 1.2rem;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .free-header__inner {
+      padding-right: 0.55rem;
+      padding-left: 0.55rem;
+    }
+
+    .free-header__phone {
+      font-size: 0.7rem;
+    }
+
+    .free-header__quote {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+      font-size: 0.68rem;
+    }
+
+    .free-header__icon {
+      width: 32px;
+    }
+
+    .free-form__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .free-field--full {
+      grid-column: auto;
+    }
+
+    .free-form__heading {
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .free-audience__cards {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .free-button {
+      transition: none;
+    }
+  }
+</style>

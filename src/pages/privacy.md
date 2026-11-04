@@ -1,8 +1,43 @@
 ---
-title: 'Privacy Policy'
+title: 'Polityka prywatności'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
+## Polityka prywatności
+
+_Ostatnia aktualizacja: 4 listopada 2026 r._
+
+Ta informacja opisuje, jak serwis Fachowe Strony przetwarza dane osób kontaktujących się z nami i wysyłających zgłoszenie przez formularz.
+
+### Administrator danych
+
+Administratorem danych jest podmiot prowadzący serwis Fachowe Strony. W sprawach związanych z danymi osobowymi skontaktuj się z nami pod adresem [info@fachowestrony.pl](mailto:info@fachowestrony.pl).
+
+### Jakie dane przetwarzamy i w jakim celu
+
+W zależności od zgłoszenia przetwarzamy imię i nazwisko, adres e-mail, numer telefonu, nazwę firmy, NIP oraz informacje wpisane w wiadomości. Dane wykorzystujemy do obsługi zgłoszenia i podjęcia działań przed zawarciem umowy na prośbę osoby zgłaszającej (art. 6 ust. 1 lit. b RODO). Możemy także przetwarzać korespondencję w celu ustalenia, dochodzenia lub obrony roszczeń, na podstawie prawnie uzasadnionego interesu (art. 6 ust. 1 lit. f RODO).
+
+Podanie danych oznaczonych w formularzu jako wymagane jest potrzebne, abyśmy mogli odpowiedzieć. Pozostałe dane są dobrowolne.
+
+### Odbiorcy i czas przechowywania
+
+Dane z formularza są przekazywane dostawcy obsługi formularza form-to-email.com. Mogą być również powierzane dostawcom hostingu, poczty elektronicznej i statystyk serwisu, w zakresie niezbędnym do ich usług. Dane przechowujemy przez czas obsługi zgłoszenia, a następnie przez okres potrzebny do ustalenia, dochodzenia lub obrony ewentualnych roszczeń.
+
+Usługi dostawców mogą wiązać się z przetwarzaniem danych poza Europejskim Obszarem Gospodarczym. W takim przypadku przekazanie powinno odbywać się z zastosowaniem zabezpieczeń wymaganych przez RODO.
+
+### Twoje prawa
+
+Masz prawo żądać dostępu do danych, ich sprostowania, usunięcia lub ograniczenia przetwarzania. W przypadkach przewidzianych prawem możesz wnieść sprzeciw albo zażądać przeniesienia danych. Możesz również złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych. W sprawach dotyczących danych napisz na [info@fachowestrony.pl](mailto:info@fachowestrony.pl).
+
+### Pliki cookies i statystyki
+
+Serwis może używać plików cookies niezbędnych do działania strony oraz narzędzi statystycznych, w tym Google Analytics. Ustawienia plików cookies można zmienić w przeglądarce. Jeżeli serwis udostępnia panel zgód, można w nim zmienić wybór dotyczący opcjonalnych plików cookies.
+
+### Zmiany informacji
+
+Aktualna treść tej informacji jest publikowana na tej stronie. W razie zmian serwisu lub przepisów możemy ją zaktualizować.
+
+<!--
 _Last updated_: January 06, 2023
 
 This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
@@ -183,3 +218,4 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
 If you have any questions about this Privacy Policy, You can contact us:
 
 - By email: somecoolemail@domain.com
+-->

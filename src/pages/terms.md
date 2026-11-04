@@ -1,8 +1,41 @@
 ---
-title: 'Terms and Conditions'
+title: 'Regulamin serwisu'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
+## Regulamin serwisu
+
+_Ostatnia aktualizacja: 4 listopada 2026 r._
+
+### 1. Informacje ogólne
+
+Regulamin określa zasady korzystania z serwisu Fachowe Strony i formularza zgłoszeniowego. W sprawach dotyczących serwisu można skontaktować się pod adresem [info@fachowestrony.pl](mailto:info@fachowestrony.pl).
+
+Serwis prezentuje informacje o usługach związanych z projektowaniem i tworzeniem stron internetowych. Informacje na stronie nie stanowią wiążącej oferty, chyba że wyraźnie wskazano inaczej.
+
+### 2. Zgłoszenie do bezpłatnego pakietu
+
+Wysłanie formularza jest bezpłatne i nie zobowiązuje do zawarcia umowy. Zgłoszenie nie oznacza automatycznego przyjęcia projektu ani przyznania bezpłatnej usługi.
+
+Po zapoznaniu się ze zgłoszeniem skontaktujemy się, aby omówić potrzeby, dostępność pakietu, jego zakres oraz ewentualne koszty dodatkowe, na przykład domeny, hostingu lub dodatkowych funkcji. Prace rozpoczną się po uzgodnieniu warunków.
+
+### 3. Zasady korzystania z serwisu
+
+Użytkownik zobowiązuje się korzystać z serwisu zgodnie z prawem, nie przesyłać treści bezprawnych oraz podawać prawdziwe dane kontaktowe potrzebne do obsługi zgłoszenia. Nie wolno kopiować ani wykorzystywać treści serwisu w sposób naruszający prawa osób trzecich lub przepisy prawa.
+
+### 4. Usługi i prawa konsumenta
+
+Szczegółowe warunki usług, w tym ich zakres, cena i termin realizacji, są uzgadniane indywidualnie przed zawarciem umowy. Regulamin nie ogranicza praw konsumenta wynikających z bezwzględnie obowiązujących przepisów prawa polskiego.
+
+### 5. Reklamacje i kontakt
+
+Uwagi dotyczące działania serwisu można przesłać na adres [info@fachowestrony.pl](mailto:info@fachowestrony.pl). W wiadomości warto opisać problem i podać dane umożliwiające udzielenie odpowiedzi. Odpowiemy bez zbędnej zwłoki.
+
+### 6. Zmiany regulaminu
+
+Zaktualizowana treść regulaminu będzie publikowana na tej stronie. Do zawartych umów stosuje się warunki uzgodnione dla danej usługi oraz obowiązujące przepisy prawa.
+
+<!--
 _Last updated_: January 06, 2023
 
 Please read these terms and conditions carefully before using Our Service.
@@ -118,3 +151,4 @@ By continuing to access or use Our Service after those revisions become effectiv
 If you have any questions about these Terms and Conditions, You can contact us:
 
 - By email: somecoolemail@domain.com
+-->

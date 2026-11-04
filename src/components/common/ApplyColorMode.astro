@@ -20,7 +20,9 @@ import { UI } from 'astrowind:config';
     }
   }
 
-  if ((defaultTheme && defaultTheme.endsWith(':only')) || (!localStorage.theme && defaultTheme !== 'system')) {
+  if (window.location.pathname.replace(/\/+$/, '') === '/darmowa-strona' && !localStorage.theme) {
+    applyTheme('light');
+  } else if ((defaultTheme && defaultTheme.endsWith(':only')) || (!localStorage.theme && defaultTheme !== 'system')) {
     applyTheme(defaultTheme.replace(':only', ''));
   } else if (
     localStorage.theme === 'dark' ||

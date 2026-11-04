@@ -77,47 +77,30 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Strony internetowe',
+      title: 'Oferta',
       links: [
-        { text: 'Strony internetowe Kraków', href: 'strony-internetowe-krakow' },
-        { text: 'Strony internetowe Krzeszowice', href: 'strony-internetowe-krzeszowice' },
-        { text: 'Strony internetowe Zabierzow', href: 'strony-internetowe-zabierzow' },
-        { text: 'Strony internetowe Wieliczka', href: 'strony-internetowe-wieliczka' },
-        { text: 'Strony internetowe Chrzanów', href: 'strony-internetowe-chrzanow' },
-        { text: 'Strony internetowe Małopolska', href: 'strony-internetowe-malopolska' },
-        { text: 'Strony internetowe', href: '#' },
+        { text: 'Strony internetowe', href: getPermalink('/strony-internetowe') },
+        { text: 'Sklepy internetowe', href: getPermalink('/sklepy-internetowe') },
+        { text: 'Projektowanie stron Webflow', href: getPermalink('/projektowanie-stron-webflow') },
+        { text: 'Pozycjonowanie stron', href: getPermalink('/marketing/pozycjonowanie-seo-krakow') },
       ],
     },
     {
-      title: 'Platform',
+      title: 'Przydatne informacje',
       links: [
-        { text: 'Strony internetowe Modlniczka', href: '#' },
-        { text: 'Strony internetowe Modlnica', href: '#' },
-        { text: 'Strony internetowe', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
+        { text: 'Bezpłatna strona internetowa', href: getPermalink('/darmowa-strona') },
+        { text: 'Cennik', href: getPermalink('/cennik') },
+        { text: 'Regulamin usług', href: getPermalink('/terms') },
+        { text: 'Polityka prywatności', href: getPermalink('/privacy') },
       ],
     },
     {
-      title: 'Support',
+      title: 'Poznaj nas',
       links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
-      ],
-    },
-    {
-      title: 'O nas',
-      links: [
-        { text: 'O nas', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Cennik', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+        { text: 'O nas', href: getPermalink('/o-nas') },
+        { text: 'Nasze realizacje', href: getPermalink('/realizacje') },
+        { text: 'Blog', href: getBlogPermalink() },
+        { text: 'Kontakt', href: getPermalink('/kontakt') },
       ],
     },
   ],
@@ -132,7 +115,5 @@ export const footerData = {
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],
-  footNote: `
-    Copyrights Fachowe Strony 2025 · All rights reserved.
-  `,
+  footNote: '© Fachowe Strony. Wszelkie prawa zastrzeżone.',
 };
